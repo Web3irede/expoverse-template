@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SectionTwo } from "../components/sections/section-two";
 
 export default function Home() {
   return (
@@ -150,6 +151,8 @@ export default function Home() {
           aria-hidden="true"
         />
       </section>
+
+      <SectionTwo />
     </main>
   );
 }
