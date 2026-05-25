@@ -99,3 +99,62 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
+
+@keyframes scroll-indicator-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes scroll-indicator-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll-indicator-arrow {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+.scroll-indicator {
+  animation: scroll-indicator-float 2.8s ease-in-out infinite;
+}
+
+.scroll-indicator__wheel {
+  animation: scroll-indicator-wheel 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+}
+
+.scroll-indicator__arrow {
+  animation: scroll-indicator-arrow 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator,
+  .scroll-indicator__wheel,
+  .scroll-indicator__arrow {
+    animation: none;
+  }
+}
