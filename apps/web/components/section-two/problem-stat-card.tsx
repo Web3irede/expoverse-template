@@ -28,13 +28,13 @@ export function ProblemStatCard({
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="h-[92px] w-[92px] shrink-0 rounded-full border border-[#9d7dff73] shadow-[0_0_20px_rgba(157,125,255,0.15)]" />
+      <div className="h-[92px] w-[92px] shrink-0 rounded-full border border-[#9d7dff73] shadow-[0_0_20px_rgba(157,125,255,0.12)]" />
 
       <div className="flex w-full max-w-[396px] flex-col gap-2.5">
         <h3
           className={[
             "font-[var(--font-space-grotesk)] font-bold text-[#9d7dff] [text-shadow:0_0_24px_rgba(185,140,255,0.28)]",
-            valueSize === "xl" ? "text-5xl leading-[1.05] lg:text-[68px]" : "text-3xl leading-[1.14] lg:text-[40px]",
+            valueSize === "xl" ? "text-4xl leading-[1.05] lg:text-[60px]" : "text-[28px] leading-[1.14] lg:text-[36px]",
           ]
             .filter(Boolean)
             .join(" ")}
@@ -42,9 +42,9 @@ export function ProblemStatCard({
           {value}
         </h3>
 
-        <p className="text-lg leading-[1.32] text-[#d9e2ec] lg:text-[22px]">{description}</p>
+        <p className="text-base leading-[1.32] text-[#d9e2ec] lg:text-[18px]">{description}</p>
 
-        <p className="text-sm leading-[1.3] text-[#64748b] lg:text-[15px]">{source}</p>
+        <p className="text-[13px] leading-[1.3] font-light text-[#64748b] lg:text-[14px]">{source}</p>
       </div>
     </article>
   );

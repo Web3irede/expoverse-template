@@ -1,5 +1,6 @@
 import { ProblemEyebrow } from "../section-two/problem-eyebrow";
 import { ProblemHeadline } from "../section-two/problem-headline";
+import { ProblemReflection } from "../section-two/problem-reflection";
 import { ProblemStatsPanel } from "../section-two/problem-stats-panel";
 import { ProblemSupportText } from "../section-two/problem-support-text";
 
@@ -12,18 +13,17 @@ export function SectionTwo({ className }: SectionTwoProps) {
     <section
       aria-label="Sessao 2 - Problema"
       className={[
-        "relative min-h-[1280px] overflow-hidden bg-[#050816] text-white",
+        "relative h-[100svh] min-h-0 overflow-hidden bg-[#050816] text-white",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="mx-auto w-full max-w-[1920px] px-6 py-12 sm:px-10 md:px-16 lg:px-20 lg:py-16">
-        <div className="mx-auto w-full max-w-[1760px]">
-          <div className="min-h-[1100px] w-full">
-            <div className="grid min-h-[968px] w-full grid-cols-1 gap-8 lg:grid-cols-[1008px_672px] lg:gap-[80px]">
-              <div className="min-h-[968px] w-full pt-4 lg:pl-4">
-                <div className="flex min-h-[480px] w-full max-w-[760px] flex-col gap-6">
+      <div className="mx-auto flex h-full w-full max-w-[1920px] flex-col px-6 py-6 sm:px-10 md:px-16 lg:px-20 lg:py-8">
+        <div className="mx-auto flex h-full w-full max-w-[1760px] flex-col">
+          <div className="grid flex-1 min-h-0 w-full grid-cols-1 gap-8 lg:grid-cols-[1008px_672px] lg:items-start lg:gap-[80px]">
+            <div className="flex w-full items-start lg:pl-4 lg:pt-1">
+              <div className="flex w-full max-w-[760px] flex-col gap-5">
                   <ProblemEyebrow label="PROBLEMA - O MUNDO REAL FALHOU" />
 
                   <ProblemHeadline
@@ -31,20 +31,22 @@ export function SectionTwo({ className }: SectionTwoProps) {
                     highlightedIndex={2}
                   />
 
-                  <div className="pt-6">
+                  <div className="pt-[18px]">
                     <ProblemSupportText text="Mas a maior parte das experiencias educacionais desaparece assim que a aula termina." />
                   </div>
-                </div>
-              </div>
-
-              <div className="flex min-h-[968px] w-full items-end pb-6">
-                <ProblemStatsPanel />
               </div>
             </div>
 
-            <div className="mt-[-38px] flex justify-center lg:mt-0 lg:pt-[62px]">
-              <div className="min-h-[150px] w-full max-w-[760px]" />
+            <div className="flex w-full items-start justify-center pt-6 lg:justify-center lg:pt-2">
+              <ProblemStatsPanel />
             </div>
+          </div>
+
+          <div className="flex shrink-0 justify-center pt-4 lg:pt-3">
+            <ProblemReflection
+              text="Talvez o problema nunca tenha sido o acesso a informacao."
+              highlight="Talvez o problema seja que aprender deixou de ser significativo."
+            />
           </div>
         </div>
       </div>

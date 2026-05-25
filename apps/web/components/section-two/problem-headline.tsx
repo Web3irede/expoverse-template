@@ -12,7 +12,7 @@ export function ProblemHeadline({
   return (
     <h2
       className={[
-        "font-[var(--font-space-grotesk)] text-5xl leading-[0.95] font-light tracking-[-0.04em] text-[#f8fafc] sm:text-6xl lg:text-[82px]",
+        "font-[var(--font-space-grotesk)] text-5xl leading-[0.95] font-light tracking-[-0.046em] text-[#f8fafc] sm:text-6xl lg:text-[82px]",
         className,
       ]
         .filter(Boolean)
@@ -24,7 +24,7 @@ export function ProblemHeadline({
           className={[
             "block",
             index === highlightedIndex
-              ? "text-[#9d7dff] [text-shadow:0_0_28px_rgba(182,140,255,0.28)]"
+              ? "text-[#9d7dff] [text-shadow:0_0_28px_rgba(182,140,255,0.25)]"
               : "",
           ]
             .filter(Boolean)
