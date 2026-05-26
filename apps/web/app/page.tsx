@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SectionThree } from "../components/sections/section-three";
 import { SectionTwo } from "../components/sections/section-two";
 
 export default function Home() {
@@ -153,6 +154,7 @@ export default function Home() {
       </section>
 
       <SectionTwo />
+      <SectionThree />
     </main>
   );
 }
