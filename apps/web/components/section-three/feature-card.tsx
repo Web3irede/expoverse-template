@@ -18,26 +18,26 @@ export function FeatureCard({
   return (
     <div
       className={[
-        "flex h-full min-h-0 flex-col justify-between px-4 py-4 lg:px-8 lg:py-6",
+        "flex h-full min-h-0 flex-col justify-between px-4 py-5 lg:px-8 lg:py-8",
         showDivider ? "border-r border-white/[0.07]" : "",
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="space-y-4 text-center">
-        <div className="mx-auto h-10 w-10 rounded-full border border-white/20 bg-white/5 lg:h-[72px] lg:w-[72px]" />
+      <div className="space-y-5 text-center">
+        <div className="mx-auto h-12 w-12 rounded-full border border-white/20 bg-white/5 lg:h-[84px] lg:w-[84px]" />
 
         <div className="space-y-2">
           <h3
             className={[
-              "font-[var(--font-sora)] text-base font-normal leading-none lg:text-[42px]",
+              "font-[var(--font-sora)] text-lg font-normal leading-none lg:text-[48px]",
               titleColorClass,
             ].join(" ")}
           >
             {title}
           </h3>
 
-          <p className="text-center text-xs leading-[1.7] text-[#d9e2ec] lg:text-base">
+          <p className="text-center text-xs leading-[1.65] text-[#d9e2ec] lg:text-[15px]">
             {description}
           </p>
         </div>
