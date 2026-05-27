@@ -3,6 +3,7 @@ import { SectionFive } from "../components/sections/section-five";
 import { SectionFour } from "../components/sections/section-four";
 import { SectionThree } from "../components/sections/section-three";
 import { SectionTwo } from "../components/sections/section-two";
+import SectionSix from "@/components/sections/section-six";
 
 export default function Home() {
   return (
@@ -159,6 +160,7 @@ export default function Home() {
       <SectionThree />
       <SectionFour />
       <SectionFive />
+      <SectionSix className="section-six" />
     </main>
   );
 }
