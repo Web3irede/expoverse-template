@@ -124,15 +124,6 @@ export default function Home() {
                   </button>
                 </div>
               </article>
-
-              <div className="relative hidden min-h-[24rem] overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.02] lg:block">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(91,192,235,0.18),transparent_38%),radial-gradient(circle_at_72%_38%,rgba(157,125,255,0.16),transparent_34%),radial-gradient(circle_at_52%_78%,rgba(53,214,255,0.12),transparent_28%)]" />
-                <div className="absolute inset-x-[12%] top-[14%] h-px bg-gradient-to-r from-transparent via-white/35 to-transparent" />
-                <div className="absolute inset-x-[18%] bottom-[20%] h-px bg-gradient-to-r from-transparent via-[#5bc0eb]/35 to-transparent" />
-                <div className="absolute left-[18%] top-[18%] h-[7rem] w-[7rem] rounded-full border border-[#5bc0eb]/30 bg-[#0b1220]/40 shadow-[0_0_40px_rgba(91,192,235,0.18)]" />
-                <div className="absolute right-[16%] top-[26%] h-[5rem] w-[5rem] rounded-full border border-[#9d7dff]/30 bg-[#101624]/40 shadow-[0_0_34px_rgba(157,125,255,0.18)]" />
-                <div className="absolute bottom-[16%] left-[34%] h-[8.5rem] w-[8.5rem] rounded-full border border-white/10 bg-[#081126]/50 shadow-[0_0_48px_rgba(53,214,255,0.12)]" />
-              </div>
             </div>
 
             <div className="mt-8 flex w-full justify-center lg:mt-0">
