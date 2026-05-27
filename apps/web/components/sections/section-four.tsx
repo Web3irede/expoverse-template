@@ -52,7 +52,7 @@ export function SectionFour({ className }: SectionFourProps) {
     <section
       aria-label="Sessao 4"
       className={[
-        "relative h-[100svh] min-h-0 overflow-hidden bg-[#050816] text-white",
+        "relative h-[100svh] min-h-0 overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
@@ -68,7 +68,7 @@ export function SectionFour({ className }: SectionFourProps) {
                     className="h-[18px] w-[18px] rounded-full border border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
                     aria-hidden="true"
                   />
-                  <p className="text-[14px] font-medium tracking-[0.32em] text-[#5bc0eb]">
+                  <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.32em] text-[#5bc0eb]">
                     EXPERIENCIA
                   </p>
                   <span
@@ -77,7 +77,7 @@ export function SectionFour({ className }: SectionFourProps) {
                   />
                 </div>
 
-                <h2 className="font-[var(--font-space-grotesk)] text-4xl font-semibold leading-[0.95] tracking-[-0.04em] text-[#d9e2ec] sm:text-5xl lg:text-[64px]">
+                <h2 className="font-heading text-[length:var(--text-mobile-h1)] font-light leading-[0.95] tracking-[-0.04em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
                   <span className="block">Aprender aqui e</span>
                   <span className="block">
                     <span className="bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent [text-shadow:0_0_18px_rgba(91,192,235,0.22)]">
@@ -90,11 +90,11 @@ export function SectionFour({ className }: SectionFourProps) {
                 <div className="space-y-4">
                   <span className="block h-px w-[320px] bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent" />
                   <div className="w-[560px] space-y-1">
-                    <p className="text-[22px] leading-[1.55] text-[#d9e2ec]">
+                    <p className="text-[length:var(--text-body-lg)] leading-[1.55] text-text-secondary lg:text-[length:var(--text-h4)]">
                       Lucas entra no Mnemos Mundi. Escolhe Astronomia. Responde,
                       conquista e deixa seu legado registrado na blockchain.
                     </p>
-                    <p className="text-[22px] leading-[1.55] font-semibold text-[#5bc0eb] [text-shadow:0_0_8px_rgba(91,192,235,0.4)]">
+                    <p className="text-[length:var(--text-body-lg)] leading-[1.55] font-semibold text-[#5bc0eb] [text-shadow:0_0_8px_rgba(91,192,235,0.4)] lg:text-[length:var(--text-h4)]">
                       Para sempre.
                     </p>
                   </div>
@@ -117,7 +117,7 @@ export function SectionFour({ className }: SectionFourProps) {
                     style={{ border: `1px solid ${card.accent}73` }}
                   >
                     <span
-                      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[18px] font-bold"
+                      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[length:var(--text-body-lg)] font-bold"
                       style={{ color: card.accent }}
                     >
                       {card.step}
@@ -132,13 +132,13 @@ export function SectionFour({ className }: SectionFourProps) {
                   </div>
 
                   <p
-                    className="w-[226px] text-center font-[var(--font-space-grotesk)] text-[17px] font-semibold leading-[1.18]"
+                    className="w-[226px] text-center font-heading text-[length:var(--text-body)] font-semibold leading-[1.18] lg:text-[length:var(--text-body-lg)]"
                     style={{ color: card.accent }}
                   >
                     {card.title}
                   </p>
 
-                  <p className="w-[226px] text-center text-[13px] font-normal leading-[1.45] text-[#d9e2ec]">
+                  <p className="w-[226px] text-center text-[length:var(--text-caption)] font-normal leading-[1.45] text-text-secondary lg:text-[length:var(--text-body-sm)]">
                     {card.description}
                   </p>
                 </div>

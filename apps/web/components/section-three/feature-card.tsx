@@ -30,14 +30,14 @@ export function FeatureCard({
         <div className="space-y-2">
           <h3
             className={[
-              "font-[var(--font-sora)] text-lg font-normal leading-none lg:text-[48px]",
+              "font-alt-heading text-[length:var(--text-body-lg)] font-semibold leading-none lg:text-[length:var(--text-h2)]",
               titleColorClass,
             ].join(" ")}
           >
             {title}
           </h3>
 
-          <p className="text-center text-xs leading-[1.65] text-[#d9e2ec] lg:text-[15px]">
+          <p className="text-center text-[length:var(--text-caption)] leading-[1.6] text-text-secondary lg:text-[length:var(--text-body-sm)]">
             {description}
           </p>
         </div>
@@ -45,7 +45,9 @@ export function FeatureCard({
 
       <div className="flex items-center justify-center gap-4">
         <span className="h-px w-10 bg-white/35 lg:w-20" />
-        <p className={["text-xs lg:text-base", indexColorClass].join(" ")}>{indexLabel}</p>
+        <p className={["text-[length:var(--text-caption)] lg:text-[length:var(--text-body)]", indexColorClass].join(" ")}>
+          {indexLabel}
+        </p>
         <span className="h-px w-10 bg-white/35 lg:w-20" />
       </div>
     </div>

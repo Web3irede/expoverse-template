@@ -7,7 +7,7 @@ export function SectionEight({ className }: SectionEightProps) {
     <section
       aria-label="Sessao 8"
       className={[
-        "relative h-[100svh] min-h-0 overflow-hidden bg-[#050816] text-white",
+        "relative h-[100svh] min-h-0 overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
@@ -30,14 +30,14 @@ export function SectionEight({ className }: SectionEightProps) {
 
                 {/* LOGO */}
                 <div className="flex h-[32px] w-[32px] shrink-0 items-center justify-center rounded-md border border-[#2ad0ff]/40 bg-[#0b1220]/80">
-                  <span className="bg-gradient-to-b from-[#35d6ff] to-[#9d7dff] bg-clip-text text-[20px] font-bold text-transparent">
+                  <span className="bg-gradient-to-b from-[#35d6ff] to-[#9d7dff] bg-clip-text text-[length:var(--text-body-lg)] font-bold text-transparent">
                     M
                   </span>
                 </div>
 
                 {/* TEXT */}
                 <div className="flex items-center">
-                  <span className="text-[18px] font-medium uppercase tracking-[0.32em] text-white/90">
+                  <span className="font-heading text-[length:var(--text-body-lg)] font-medium uppercase tracking-[0.32em] text-text-secondary">
                     Mnemos Mundi
                   </span>
                 </div>
@@ -54,12 +54,12 @@ export function SectionEight({ className }: SectionEightProps) {
               {/* ================================================= */}
               <div className="flex h-[220px] w-full max-w-[1180px] shrink-0 flex-col items-center justify-center gap-2 text-center">
                 {/* LINE 1 */}
-                <h1 className="text-[82px] leading-[0.95] font-semibold tracking-[-0.04em] text-white">
+                <h1 className="font-heading text-[length:var(--text-mobile-h1)] leading-[0.95] font-light tracking-[-0.04em] text-text-primary lg:text-[length:var(--text-display)]">
                   Não é sobre aprender.
                 </h1>
 
                 {/* LINE 2 */}
-                <h1 className="text-[82px] leading-[0.95] font-semibold tracking-[-0.04em] text-white">
+                <h1 className="font-heading text-[length:var(--text-mobile-h1)] leading-[0.95] font-light tracking-[-0.04em] text-text-primary lg:text-[length:var(--text-display)]">
                   É sobre{" "}
                   <span className="bg-gradient-to-r from-[#35d6ff] via-[#3ddcff] to-[#b56cff] bg-clip-text text-transparent">
                     viver o conhecimento.
@@ -74,11 +74,11 @@ export function SectionEight({ className }: SectionEightProps) {
               {/* SUPPORTING TEXT CONTAINER */}
               {/* ================================================= */}
               <div className="flex h-[110px] w-full max-w-[680px] shrink-0 flex-col items-center justify-center gap-1 text-center">
-                <p className="text-[32px] leading-[1.2] font-normal text-white/85">
+                <p className="text-[length:var(--text-body-lg)] leading-[1.3] font-normal text-text-secondary lg:text-[length:var(--text-h3)]">
                   O futuro da educação está aberto.
                 </p>
 
-                <p className="text-[32px] leading-[1.2] font-normal text-white/85">
+                <p className="text-[length:var(--text-body-lg)] leading-[1.3] font-normal text-text-secondary lg:text-[length:var(--text-h3)]">
                   E <span className="font-semibold text-[#35d6ff]">você</span>{" "}
                   pode fazer parte.
                 </p>
@@ -107,7 +107,7 @@ export function SectionEight({ className }: SectionEightProps) {
                   <div className="h-4 shrink-0" />
 
                   {/* TITLE */}
-                  <h3 className="text-center text-[38px] leading-none font-semibold tracking-[-0.03em] text-white">
+                  <h3 className="font-heading text-center text-[length:var(--text-h4)] leading-none font-semibold tracking-[-0.03em] text-text-primary lg:text-[length:var(--text-h3)]">
                     Explore.
                   </h3>
 
@@ -116,11 +116,11 @@ export function SectionEight({ className }: SectionEightProps) {
 
                   {/* DESCRIPTION */}
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-[18px] leading-[1.15] font-normal text-white/78">
+                    <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                       Novos mundos
                     </p>
 
-                    <p className="text-[18px] leading-[1.15] font-normal text-white/78">
+                    <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                       do conhecimento.
                     </p>
                   </div>
@@ -145,7 +145,7 @@ export function SectionEight({ className }: SectionEightProps) {
                   <div className="h-4 shrink-0" />
 
                   {/* TITLE */}
-                  <h3 className="text-center text-[38px] leading-none font-semibold tracking-[-0.03em] text-white">
+                  <h3 className="font-heading text-center text-[length:var(--text-h4)] leading-none font-semibold tracking-[-0.03em] text-text-primary lg:text-[length:var(--text-h3)]">
                     Conquiste.
                   </h3>
 
@@ -154,11 +154,11 @@ export function SectionEight({ className }: SectionEightProps) {
 
                   {/* DESCRIPTION */}
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-[18px] leading-[1.15] font-normal text-white/78">
+                    <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                       Conquistas reais
                     </p>
 
-                    <p className="text-[18px] leading-[1.15] font-normal text-white/78">
+                    <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                       que ficam com você.
                     </p>
                   </div>
@@ -183,7 +183,7 @@ export function SectionEight({ className }: SectionEightProps) {
                   <div className="h-4 shrink-0" />
 
                   {/* TITLE */}
-                  <h3 className="text-center text-[38px] leading-none font-semibold tracking-[-0.03em] text-white">
+                  <h3 className="font-heading text-center text-[length:var(--text-h4)] leading-none font-semibold tracking-[-0.03em] text-text-primary lg:text-[length:var(--text-h3)]">
                     Crie.
                   </h3>
 
@@ -192,11 +192,11 @@ export function SectionEight({ className }: SectionEightProps) {
 
                   {/* DESCRIPTION */}
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-[18px] leading-[1.15] font-normal text-white/78">
+                    <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                       Construa experiências
                     </p>
 
-                    <p className="text-[18px] leading-[1.15] font-normal text-white/78">
+                    <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                       e deixe sua marca.
                     </p>
                   </div>
@@ -218,7 +218,7 @@ export function SectionEight({ className }: SectionEightProps) {
                   <div className="h-4 shrink-0" />
 
                   {/* TITLE */}
-                  <h3 className="text-center text-[38px] leading-none font-semibold tracking-[-0.03em] text-white">
+                  <h3 className="font-heading text-center text-[length:var(--text-h4)] leading-none font-semibold tracking-[-0.03em] text-text-primary lg:text-[length:var(--text-h3)]">
                     Transforme.
                   </h3>
 
@@ -227,11 +227,11 @@ export function SectionEight({ className }: SectionEightProps) {
 
                   {/* DESCRIPTION */}
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-[18px] leading-[1.15] font-normal text-white/78">
+                    <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                       Impacte vidas e
                     </p>
 
-                    <p className="text-[18px] leading-[1.15] font-normal text-white/78">
+                    <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                       construa o futuro.
                     </p>
                   </div>
@@ -265,11 +265,11 @@ export function SectionEight({ className }: SectionEightProps) {
 
                   {/* TEXT GROUP */}
                   <div className="relative z-10 flex flex-col items-start">
-                    <span className="text-[24px] leading-none font-semibold tracking-[-0.03em] text-white">
+                    <span className="font-heading text-[length:var(--text-body-lg)] leading-none font-semibold tracking-[-0.03em] text-text-primary lg:text-[length:var(--text-h4)]">
                       Entrar no Mnenus
                     </span>
 
-                    <span className="mt-2 text-[16px] leading-none font-normal text-white/72">
+                    <span className="mt-2 text-[length:var(--text-body)] leading-none font-normal text-text-secondary">
                       Ver demonstração do protótipo
                     </span>
                   </div>
@@ -292,11 +292,11 @@ export function SectionEight({ className }: SectionEightProps) {
 
                   {/* TEXT GROUP */}
                   <div className="relative z-10 flex flex-col items-start">
-                    <span className="text-[22px] leading-none font-medium tracking-[-0.03em] text-white">
+                    <span className="font-heading text-[length:var(--text-body-lg)] leading-none font-medium tracking-[-0.03em] text-text-primary lg:text-[length:var(--text-h4)]">
                       Pitch Deck
                     </span>
 
-                    <span className="mt-2 text-[15px] leading-none font-normal text-white/68">
+                    <span className="mt-2 text-[length:var(--text-body-sm)] leading-none font-normal text-text-secondary">
                       Baixar apresentação
                     </span>
                   </div>
@@ -314,7 +314,7 @@ export function SectionEight({ className }: SectionEightProps) {
                 <div className="h-px w-[120px] bg-gradient-to-r from-transparent to-[#35d6ff]/60" />
 
                 {/* TEXT */}
-                <p className="text-[22px] leading-none font-normal tracking-[-0.02em] text-white/88">
+                <p className="text-[length:var(--text-body-lg)] leading-none font-normal tracking-[-0.02em] text-text-secondary lg:text-[length:var(--text-h4)]">
                   Vamos construir o futuro juntos.
                 </p>
 
@@ -335,7 +335,7 @@ export function SectionEight({ className }: SectionEightProps) {
             {/* CONTENT */}
             <div className="relative z-10 flex w-full flex-col items-center">
               {/* TITLE */}
-              <h3 className="text-center text-[26px] leading-none font-semibold tracking-[-0.03em] text-white">
+              <h3 className="font-heading text-center text-[length:var(--text-h4)] leading-none font-semibold tracking-[-0.03em] text-text-primary">
                 Experimente agora
               </h3>
 
@@ -344,11 +344,11 @@ export function SectionEight({ className }: SectionEightProps) {
 
               {/* SUBTITLE */}
               <div className="flex flex-col items-center text-center">
-                <p className="text-[17px] leading-[1.2] font-normal text-white/78">
+                <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                   Escaneie para acessar
                 </p>
 
-                <p className="text-[17px] leading-[1.2] font-normal text-white/78">
+                <p className="text-[length:var(--text-body)] leading-[1.2] font-normal text-text-secondary">
                   o protótipo interativo
                 </p>
               </div>
@@ -380,7 +380,7 @@ export function SectionEight({ className }: SectionEightProps) {
 
                 {/* CENTER LOGO */}
                 <div className="absolute left-1/2 top-1/2 flex h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#35d6ff]/50 bg-[#101624] shadow-[0_0_22px_rgba(53,214,255,0.65)]">
-                  <span className="bg-gradient-to-b from-[#35d6ff] to-[#b56cff] bg-clip-text text-[28px] font-bold text-transparent">
+                  <span className="bg-gradient-to-b from-[#35d6ff] to-[#b56cff] bg-clip-text text-[length:var(--text-h3)] font-bold text-transparent">
                     M
                   </span>
                 </div>

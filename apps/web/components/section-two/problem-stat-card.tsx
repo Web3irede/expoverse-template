@@ -33,8 +33,10 @@ export function ProblemStatCard({
       <div className="flex w-full max-w-[396px] flex-col gap-2.5">
         <h3
           className={[
-            "font-[var(--font-space-grotesk)] font-bold text-[#9d7dff] [text-shadow:0_0_24px_rgba(185,140,255,0.28)]",
-            valueSize === "xl" ? "text-4xl leading-[1.05] lg:text-[60px]" : "text-[28px] leading-[1.14] lg:text-[36px]",
+            "font-heading font-bold text-[#9d7dff] [text-shadow:0_0_24px_rgba(185,140,255,0.28)]",
+            valueSize === "xl"
+              ? "text-[length:var(--text-h2)] leading-[1.05] lg:text-[length:var(--text-display)]"
+              : "text-[length:var(--text-h3)] leading-[1.14] lg:text-[length:var(--text-h2)]",
           ]
             .filter(Boolean)
             .join(" ")}
@@ -42,9 +44,13 @@ export function ProblemStatCard({
           {value}
         </h3>
 
-        <p className="text-base leading-[1.32] text-[#d9e2ec] lg:text-[18px]">{description}</p>
+        <p className="text-[length:var(--text-body)] leading-[1.4] text-text-secondary lg:text-[length:var(--text-body-lg)]">
+          {description}
+        </p>
 
-        <p className="text-[13px] leading-[1.3] font-light text-[#64748b] lg:text-[14px]">{source}</p>
+        <p className="text-[length:var(--text-caption)] leading-[1.3] font-light text-text-muted lg:text-[length:var(--text-body-sm)]">
+          {source}
+        </p>
       </div>
     </article>
   );

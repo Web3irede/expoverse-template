@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <section
         aria-label="Hero"
-        className="relative min-h-[100svh] overflow-hidden bg-[#0e1116] text-white"
+        className="relative min-h-[100svh] overflow-hidden bg-background text-foreground"
       >
         <div
           className="pointer-events-none absolute inset-0"
@@ -82,10 +82,10 @@ export default function Home() {
               </div>
 
               <div className="space-y-1.5">
-                <p className="font-[var(--font-space-grotesk)] text-sm tracking-[0.45em] text-slate-100 lg:text-[18px]">
+                <p className="font-heading text-[length:var(--text-eyebrow)] font-medium tracking-[0.45em] text-text-secondary lg:text-[length:var(--text-body-lg)]">
                   MNEMOS MUNDI
                 </p>
-                <p className="text-[11px] tracking-[0.3em] text-slate-300 lg:text-xs lg:tracking-[0.4em]">
+                <p className="text-[length:var(--text-caption)] tracking-[0.3em] text-text-muted lg:tracking-[0.4em]">
                   EXPLORE. APRENDA. TRANSFORME.
                 </p>
               </div>
@@ -97,7 +97,7 @@ export default function Home() {
               <div className="grid w-full grid-cols-1 gap-12 lg:grid-cols-[800px_minmax(0,1fr)] lg:gap-[72px]">
                 <article className="flex min-h-[420px] flex-col justify-start lg:pt-[40px]">
                   <div className="max-w-[800px]">
-                    <h1 className="font-[var(--font-space-grotesk)] text-5xl leading-[0.92] font-light tracking-[-0.035em] text-[#f8fafc] sm:text-6xl lg:text-[76px]">
+                    <h1 className="font-heading text-[length:var(--text-mobile-hero)] leading-[0.92] font-light tracking-[-0.035em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
                       <span className="block">E se aprender</span>
                       <span className="block">fosse uma</span>
                       <span className="block bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(91,192,235,0.18)]">
@@ -106,7 +106,7 @@ export default function Home() {
                       <span className="block">que nunca termina?</span>
                     </h1>
 
-                    <p className="mt-8 max-w-[550px] text-base leading-[1.24] text-[#d9e2ec] sm:text-lg lg:text-[21px]">
+                    <p className="mt-8 max-w-[550px] text-[length:var(--text-body)] leading-[1.35] text-text-secondary sm:text-[length:var(--text-body-lg)]">
                       Explore mundos. Conquiste conhecimento.
                       <br className="hidden sm:block" />
                       Deixe seu legado no Mnemos Mundi.
@@ -116,10 +116,10 @@ export default function Home() {
                   <div className="mt-10 lg:mt-[174px]">
                     <button
                       type="button"
-                      className="inline-flex h-[60px] items-center gap-3 rounded-full border border-[#50b4ff] bg-white/[0.08] px-5 text-lg font-semibold text-slate-50 shadow-[0_0_40px_rgba(80,180,255,0.22)] backdrop-blur-xl transition-colors hover:bg-white/[0.12]"
+                      className="inline-flex h-[60px] items-center gap-3 rounded-full border border-[#50b4ff] bg-white/[0.08] px-5 text-[length:var(--text-body)] font-semibold text-text-primary shadow-[0_0_40px_rgba(80,180,255,0.22)] backdrop-blur-xl transition-colors hover:bg-white/[0.12]"
                     >
                       <span className="inline-flex h-[38px] w-[38px] items-center justify-center rounded-full border border-[#69e6ff] bg-[#071421] shadow-[0_0_20px_rgba(105,230,255,0.35)]" />
-                      <span className="font-[var(--font-space-grotesk)] text-base sm:text-lg lg:text-[20px]">
+                      <span className="font-heading text-[length:var(--text-body)] sm:text-[length:var(--text-body-lg)]">
                         Entrar no Mnemos Mundi
                       </span>
                     </button>
@@ -133,11 +133,13 @@ export default function Home() {
             </div>
 
             <div className="flex w-full justify-center lg:justify-end">
-              <div className="scroll-indicator flex w-fit flex-col items-center justify-center gap-2 text-[#d9e2ec] lg:mr-[742px] lg:min-h-[104px] lg:w-[236px]">
+              <div className="scroll-indicator flex w-fit flex-col items-center justify-center gap-2 text-text-secondary lg:mr-[742px] lg:min-h-[104px] lg:w-[236px]">
                 <div className="flex h-10 w-6 items-start justify-center rounded-full border border-white/70 p-1">
                   <span className="scroll-indicator__wheel h-2 w-2 rounded-full bg-white/80" />
                 </div>
-                <span className="text-sm font-medium lg:text-base">Role para descobrir</span>
+                <span className="text-[length:var(--text-body-sm)] font-medium lg:text-[length:var(--text-body)]">
+                  Role para descobrir
+                </span>
                 <span
                   className="scroll-indicator__arrow h-2 w-2 border-b border-r border-white/70"
                   style={{ transform: "rotate(45deg)" }}

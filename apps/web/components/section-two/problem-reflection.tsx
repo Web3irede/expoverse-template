@@ -20,9 +20,11 @@ export function ProblemReflection({
         .filter(Boolean)
         .join(" ")}
     >
-      <p className="w-full text-xl leading-[1.22] text-[#d9e2ec] lg:text-[26px]">{text}</p>
+      <p className="w-full text-[length:var(--text-body-lg)] leading-[1.35] text-text-secondary lg:text-[length:var(--text-h4)]">
+        {text}
+      </p>
 
-      <p className="w-full text-lg font-medium leading-[1.22] text-[#9d7dff] [text-shadow:0_0_8px_rgba(157,125,255,0.35)] lg:text-[24px]">
+      <p className="w-full text-[length:var(--text-body-lg)] font-medium leading-[1.35] text-[#9d7dff] [text-shadow:0_0_8px_rgba(157,125,255,0.35)] lg:text-[length:var(--text-h4)]">
         {highlight}
       </p>
 

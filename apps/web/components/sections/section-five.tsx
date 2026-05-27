@@ -27,14 +27,14 @@ function SmartContractsCard() {
       <div className="relative h-[180px] w-[180px] shrink-0 rounded-full border border-[#bfefff8c] bg-[radial-gradient(circle_at_center,rgba(32,75,122,0.8)_0%,rgba(20,49,95,0.72)_55%,rgba(11,24,51,0.9)_100%)] shadow-[0_0_18px_rgba(56,182,255,0.42),0_0_10px_rgba(166,230,255,0.22)]" />
 
       <div className="relative z-10 w-[220px] min-w-0 space-y-2 space-y-3">
-        <h4 className="font-[var(--font-space-grotesk)] text-[18px] font-semibold tracking-[0.035em] text-[#5bc0eb]">
+        <h4 className="font-heading text-[length:var(--text-body-lg)] font-semibold tracking-[0.035em] text-[#5bc0eb]">
           1. SMART CONTRACTS
         </h4>
 
-        <p className="text-[16px] leading-[1.35] text-[#d9e2ec]">
+        <p className="text-[length:var(--text-body)] leading-[1.4] text-text-secondary">
           Conquistas registradas de forma permanente e verificavel.
         </p>
-        <p className="text-[16px] leading-[1.35] text-[#d9e2ec]">
+        <p className="text-[length:var(--text-body)] leading-[1.4] text-text-secondary">
           Emissao automatica e segura de badges e certificados.
         </p>
       </div>
@@ -47,7 +47,7 @@ export function SectionFive({ className }: SectionFiveProps) {
     <section
       aria-label="Sessao 5"
       className={[
-        "relative h-[100svh] min-h-0 overflow-hidden bg-[#050816] text-white",
+        "relative h-[100svh] min-h-0 overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
@@ -64,7 +64,7 @@ export function SectionFive({ className }: SectionFiveProps) {
                   aria-hidden="true"
                 />
 
-                <p className="text-[14px] font-medium tracking-[0.32em] text-[#5bc0eb]">
+                <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.32em] text-[#5bc0eb]">
                   WEB3 NA PRÁTICA
                 </p>
 
@@ -74,12 +74,12 @@ export function SectionFive({ className }: SectionFiveProps) {
                 />
               </div>
 
-              <div className="space-y-1 font-[var(--font-space-grotesk)] text-[#f8fafc]">
-                <h2 className="text-3xl font-semibold leading-[0.94] tracking-[-0.04em] sm:text-4xl lg:text-[48px]">
+              <div className="space-y-1 font-heading text-text-primary">
+                <h2 className="text-[length:var(--text-mobile-h2)] font-light leading-[0.94] tracking-[-0.04em] sm:text-[length:var(--text-h2)] lg:text-[length:var(--text-h1)]">
                   Tecnologia que transforma
                 </h2>
 
-                <h3 className="text-3xl font-semibold leading-[0.94] tracking-[-0.04em] sm:text-4xl lg:text-[48px]">
+                <h3 className="text-[length:var(--text-mobile-h2)] font-light leading-[0.94] tracking-[-0.04em] sm:text-[length:var(--text-h2)] lg:text-[length:var(--text-h1)]">
                   <span>aprendizado em </span>
                   <span className="bg-gradient-to-r from-[#ffb84d] to-[#ffd978] bg-clip-text text-transparent">
                     legado.
@@ -93,7 +93,7 @@ export function SectionFive({ className }: SectionFiveProps) {
                   aria-hidden="true"
                 />
 
-                <div className="space-y-1 text-[18px] leading-[1.4] text-[#d9e2ec] lg:text-[18px] lg:leading-[1.32]">
+                <div className="space-y-1 text-[length:var(--text-body)] leading-[1.4] text-text-secondary lg:text-[length:var(--text-body-lg)] lg:leading-[1.32]">
                   <p className="max-w-[520px]">
                     Uma experiencia imersiva para que suas conquistas digitais e
                     seu conhecimento
@@ -119,7 +119,7 @@ export function SectionFive({ className }: SectionFiveProps) {
               {/* Center column */}
               <div className="flex h-full flex-col items-center justify-center gap-4">
                 <div className="flex items-center justify-center px-6 py-4">
-                  <div className="space-y-1 text-center text-[14px] font-medium tracking-[0.28em] text-[#d9e2ec] lg:text-[14px] lg:tracking-[0.28em]">
+                  <div className="space-y-1 text-center text-[length:var(--text-body-sm)] font-medium tracking-[0.28em] text-text-secondary lg:tracking-[0.28em]">
                     <p>
                       <span className="text-[#f4c95d]">CONHECIMENTO</span>
                       <span> COM</span>
@@ -174,15 +174,15 @@ export function SectionFive({ className }: SectionFiveProps) {
     />
 
     <div className="relative flex h-[76px] w-[76px] shrink-0 items-center justify-center rounded-full border border-[#f4c95d80] bg-[radial-gradient(circle_at_center,rgba(255,217,120,0.16)_0%,rgba(255,217,120,0.05)_65%,transparent_100%)] shadow-[0_0_26px_rgba(244,201,93,0.34)]">
-      <span className="text-[32px] text-[#f4c95d]">🛡</span>
+      <span className="text-[length:var(--text-h3)] text-[#f4c95d]">🛡</span>
     </div>
 
     <div className="relative min-w-0 flex-1 space-y-1">
-      <p className="text-[20px] font-medium text-[#f8fafc] lg:text-[26px]">
+      <p className="font-heading text-[length:var(--text-body-lg)] font-medium text-text-primary lg:text-[length:var(--text-h4)]">
         O conhecimento so tem valor real
       </p>
 
-      <p className="text-[20px] font-medium text-[#f8fafc] lg:text-[26px]">
+      <p className="font-heading text-[length:var(--text-body-lg)] font-medium text-text-primary lg:text-[length:var(--text-h4)]">
         <span>quando pode </span>
 
         <span className="bg-gradient-to-r from-[#f4c95d] to-[#ffd978] bg-clip-text text-transparent">
@@ -193,7 +193,7 @@ export function SectionFive({ className }: SectionFiveProps) {
 
     <div className="relative h-[64px] w-px shrink-0 bg-gradient-to-b from-transparent via-[#ffffff30] to-transparent" />
 
-    <p className="relative w-[34%] min-w-[180px] text-[14px] leading-[1.45] text-[#d9e2ec] lg:text-[18px]">
+    <p className="relative w-[34%] min-w-[180px] text-[length:var(--text-body-sm)] leading-[1.45] text-text-secondary lg:text-[length:var(--text-body-lg)]">
       Web3 nao e sobre moda.
       <br />
       E sobre construir confianca,

@@ -14,7 +14,7 @@ export function ProblemEyebrow({ label, className }: ProblemEyebrowProps) {
         aria-hidden="true"
       />
 
-      <p className="text-[14px] font-medium tracking-[0.32em] text-[#5bc0eb]">
+      <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.32em] text-[#5bc0eb]">
         {label}
       </p>
 

@@ -18,7 +18,7 @@ export function ProblemBrandSignature({
         .filter(Boolean)
         .join(" ")}
     >
-      <span className="font-[var(--font-space-grotesk)] text-lg font-medium tracking-[0.28em] text-[#9d7dff] lg:text-[22px]">
+      <span className="font-heading text-[length:var(--text-body-lg)] font-medium tracking-[0.28em] text-[#9d7dff] lg:text-[length:var(--text-h4)]">
         {leftText}
       </span>
 
@@ -27,7 +27,7 @@ export function ProblemBrandSignature({
         aria-hidden="true"
       />
 
-      <span className="font-[var(--font-space-grotesk)] text-lg font-medium tracking-[0.28em] text-[#9d7dff] lg:text-[22px]">
+      <span className="font-heading text-[length:var(--text-body-lg)] font-medium tracking-[0.28em] text-[#9d7dff] lg:text-[length:var(--text-h4)]">
         {rightText}
       </span>
     </div>

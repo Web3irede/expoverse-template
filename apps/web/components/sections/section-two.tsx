@@ -13,7 +13,7 @@ export function SectionTwo({ className }: SectionTwoProps) {
     <section
       aria-label="Sessao 2 - Problema"
       className={[
-        "relative h-[100svh] min-h-0 overflow-hidden bg-[#050816] text-white",
+        "relative h-[100svh] min-h-0 overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)

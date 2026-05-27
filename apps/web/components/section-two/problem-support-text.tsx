@@ -7,7 +7,7 @@ export function ProblemSupportText({ text, className }: ProblemSupportTextProps)
   return (
     <p
       className={[
-        "max-w-[520px] text-lg leading-[1.32] font-normal text-[#d9e2ec] lg:text-[24px]",
+        "max-w-[520px] text-[length:var(--text-body)] leading-[1.45] font-normal text-text-secondary lg:text-[length:var(--text-body-lg)]",
         className,
       ]
         .filter(Boolean)

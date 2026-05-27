@@ -8,7 +8,7 @@ export function ProblemStatsPanel({ className }: ProblemStatsPanelProps) {
   return (
     <div
       className={[
-        "w-full max-w-[520px] bg-[#050816]",
+        "w-full max-w-[520px] bg-background",
         "flex min-h-[720px] flex-col",
         className,
       ]

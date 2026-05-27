@@ -153,9 +153,9 @@ const LeftCard = ({ card }: { card: LeftCardData }) => {
       <div>
         <h3
           style={{
-            fontSize: 17,
+            fontSize: "var(--text-body)",
             fontWeight: 600,
-            color: "#c8d8ee",
+            color: "var(--text-secondary)",
             lineHeight: 1.2,
             marginBottom: 6,
             fontFamily: "'Space Grotesk', sans-serif",
@@ -165,8 +165,8 @@ const LeftCard = ({ card }: { card: LeftCardData }) => {
         </h3>
         <p
           style={{
-            fontSize: 13,
-            color: "#6a7e9e",
+            fontSize: "var(--text-caption)",
+            color: "var(--text-muted)",
             lineHeight: 1.5,
             fontFamily: "'Space Grotesk', sans-serif",
           }}
@@ -232,9 +232,9 @@ const RightCard = ({ card }: { card: RightCardData }) => {
       <div style={{ position: "relative", zIndex: 1 }}>
         <h3
           style={{
-            fontSize: 17,
+            fontSize: "var(--text-body)",
             fontWeight: 600,
-            color: "#ffffff",
+            color: "var(--text-primary)",
             lineHeight: 1.2,
             marginBottom: 6,
             fontFamily: "'Space Grotesk', sans-serif",
@@ -244,8 +244,8 @@ const RightCard = ({ card }: { card: RightCardData }) => {
         </h3>
         <p
           style={{
-            fontSize: 13,
-            color: "#9ab0cc",
+            fontSize: "var(--text-caption)",
+            color: "var(--text-secondary)",
             lineHeight: 1.5,
             fontFamily: "'Space Grotesk', sans-serif",
           }}
@@ -266,8 +266,8 @@ export default function SectionSix({ className }: { className?: string }) {
         height: "100svh",
         minHeight: 0,
         overflow: "hidden",
-        background: "#050816",
-        color: "white",
+        background: "var(--background)",
+        color: "var(--text-primary)",
         display: "flex",
         flexDirection: "column",
       }}
@@ -335,10 +335,10 @@ export default function SectionSix({ className }: { className?: string }) {
             />
             <span
               style={{
-                fontSize: 10,
+                fontSize: "var(--text-caption)",
                 fontWeight: 500,
                 letterSpacing: "0.45em",
-                color: "#5bc0eb",
+                color: "var(--color-cyan-400)",
                 fontFamily: "'Space Grotesk', sans-serif",
               }}
             >
@@ -348,7 +348,7 @@ export default function SectionSix({ className }: { className?: string }) {
 
           <h2
             style={{
-              fontSize: 64,
+              fontSize: "var(--text-display)",
               fontWeight: 300,
               lineHeight: 0.95,
               letterSpacing: "-0.05em",
@@ -357,7 +357,7 @@ export default function SectionSix({ className }: { className?: string }) {
               fontFamily: "'Space Grotesk', sans-serif",
             }}
           >
-            <span style={{ color: "white" }}>Dois mundos. </span>
+            <span style={{ color: "var(--text-primary)" }}>Dois mundos. </span>
             <span
               style={{
                 background: "linear-gradient(to right, #5bc0eb, #58a6ff)",
@@ -372,9 +372,9 @@ export default function SectionSix({ className }: { className?: string }) {
 
           <p
             style={{
-              fontSize: 16,
+              fontSize: "var(--text-body)",
               fontWeight: 300,
-              color: "#8aa4c0",
+              color: "var(--text-muted)",
               letterSpacing: "-0.02em",
               margin: 0,
               fontFamily: "'Space Grotesk', sans-serif",
@@ -429,10 +429,10 @@ export default function SectionSix({ className }: { className?: string }) {
               />
               <span
                 style={{
-                  fontSize: 13,
+                  fontSize: "var(--text-body-sm)",
                   fontWeight: 500,
                   letterSpacing: "0.28em",
-                  color: "#8aa4c0",
+                  color: "var(--text-muted)",
                   fontFamily: "'Space Grotesk', sans-serif",
                 }}
               >
@@ -498,10 +498,10 @@ export default function SectionSix({ className }: { className?: string }) {
               />
               <span
                 style={{
-                  fontSize: 13,
+                  fontSize: "var(--text-body-sm)",
                   fontWeight: 500,
                   letterSpacing: "0.28em",
-                  color: "#5bc0eb",
+                  color: "var(--color-cyan-400)",
                   fontFamily: "'Space Grotesk', sans-serif",
                   textShadow: "0 0 12px rgba(91,192,235,0.4)",
                 }}
@@ -563,9 +563,9 @@ export default function SectionSix({ className }: { className?: string }) {
           {/* Text left */}
           <span
             style={{
-              fontSize: 15,
+              fontSize: "var(--text-body-sm)",
               fontWeight: 400,
-              color: "#c8d8ee",
+              color: "var(--text-secondary)",
               fontFamily: "'Space Grotesk', sans-serif",
               letterSpacing: "-0.01em",
               whiteSpace: "nowrap",
@@ -589,9 +589,9 @@ export default function SectionSix({ className }: { className?: string }) {
           {/* Text right */}
           <span
             style={{
-              fontSize: 15,
+              fontSize: "var(--text-body-sm)",
               fontWeight: 400,
-              color: "#c8d8ee",
+              color: "var(--text-secondary)",
               fontFamily: "'Space Grotesk', sans-serif",
               letterSpacing: "-0.01em",
               whiteSpace: "nowrap",

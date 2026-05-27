@@ -38,7 +38,7 @@ export function SectionSeven({ className }: SectionSevenProps) {
     <section
       aria-label="Sessao 7"
       className={[
-        "relative h-[100svh] min-h-0 overflow-hidden bg-[#050816] text-white",
+        "relative h-[100svh] min-h-0 overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
@@ -47,13 +47,13 @@ export function SectionSeven({ className }: SectionSevenProps) {
       <div className="mx-auto flex h-full w-full max-w-[1920px] flex-col px-4 pt-4 pb-1 sm:px-10 md:px-16 lg:px-8 lg:pt-6 lg:pb-1">
         <div className="mx-auto flex h-full w-full max-w-[1760px] min-h-0 flex-col items-center gap-3 lg:gap-4">
           <div className="flex h-[4%] w-[390px] shrink-0 items-center justify-center ">
-            <p className="text-[14px] font-medium tracking-[0.42em] text-[#5bc0eb]">
+            <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.42em] text-[#5bc0eb]">
               IMPACTO
             </p>
           </div>
 
           <div className="flex h-[8%] w-full shrink-0 items-center justify-center ">
-            <h2 className="font-[var(--font-sora)] text-[56px] font-light leading-none tracking-[-0.04em] text-[#f8fafc]">
+            <h2 className="font-alt-heading text-[length:var(--text-mobile-h1)] font-light leading-none tracking-[-0.04em] text-text-primary lg:text-[length:var(--text-h1)]">
               O futuro da{" "}
               <span className="bg-gradient-to-r from-[#9d7dff] to-[#35d6ff] bg-clip-text text-transparent">
                 educação
@@ -66,7 +66,7 @@ export function SectionSeven({ className }: SectionSevenProps) {
           </div>
 
           <div className="flex h-[4%] w-[810px] shrink-0 items-center justify-center ">
-            <p className="text-[22px] font-light leading-none text-[#d9e2ec]">
+            <p className="text-[length:var(--text-body-lg)] font-light leading-[1.25] text-text-secondary lg:text-[length:var(--text-h4)]">
               Estamos construindo um{" "}
               <span className="text-[#35d6ff]">
                 futuro digital de verdade
@@ -95,11 +95,11 @@ export function SectionSeven({ className }: SectionSevenProps) {
                 />
 
                 <div className="flex flex-col gap-1">
-                  <strong className="font-[var(--font-sora)] text-[44px] font-light leading-none text-[#f8fafc]">
+                  <strong className="font-alt-heading text-[length:var(--text-h2)] font-light leading-none text-text-primary">
                     {metric.value}
                   </strong>
 
-                  <p className="whitespace-pre-line text-[21px] font-light leading-[1.3] text-[#d9e2ec]">
+                  <p className="whitespace-pre-line text-[length:var(--text-body)] font-light leading-[1.3] text-text-secondary lg:text-[length:var(--text-body-lg)]">
                     {metric.description}
                   </p>
                 </div>
@@ -110,7 +110,7 @@ export function SectionSeven({ className }: SectionSevenProps) {
           <div className="h-[28%] w-full shrink-0 " />
 
           <div className="flex h-[11%] w-[90%] shrink-0 items-center justify-center rounded-[24px]  bg-[#101624]/80 px-10">
-            <p className="font-[var(--font-sora)] text-[44px] font-light leading-none tracking-[0.02em] text-[#d9e2ec]">
+            <p className="font-alt-heading text-[length:var(--text-h2)] font-light leading-none tracking-[0.02em] text-text-secondary">
               Deixar um{" "}
               <span className="text-[#9d7dff] drop-shadow-[0_0_12px_rgba(157,125,255,0.65)]">
                 legado
@@ -143,7 +143,7 @@ export function SectionSeven({ className }: SectionSevenProps) {
                     aria-hidden="true"
                   />
 
-                  <p className="text-[18px] font-light leading-none text-[#d9e2ec]">
+                  <p className="text-[length:var(--text-body)] font-light leading-none text-text-secondary lg:text-[length:var(--text-body-lg)]">
                     {pillar.label}
                   </p>
                 </div>

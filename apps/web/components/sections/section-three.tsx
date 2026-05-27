@@ -44,7 +44,7 @@ export function SectionThree({ className }: SectionThreeProps) {
     <section
       aria-label="Sessao 3 - Estrutural"
       className={[
-        "relative h-[100svh] min-h-0 overflow-hidden bg-[#050816] text-white",
+        "relative h-[100svh] min-h-0 overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
@@ -61,13 +61,13 @@ export function SectionThree({ className }: SectionThreeProps) {
                       className="h-[18px] w-[18px] rounded-full border border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
                       aria-hidden="true"
                     />
-                    <p className="text-[14px] font-medium tracking-[0.32em] text-[#5bc0eb]">
+                    <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.32em] text-[#5bc0eb]">
                       REVELACAO
                     </p>
                     <span className="h-px w-[280px] bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent" aria-hidden="true" />
                   </div>
 
-                  <h2 className="font-[var(--font-sora)] text-5xl leading-[1.02] font-light tracking-[-0.04em] text-[#f8fafc] sm:text-6xl lg:text-[72px]">
+                  <h2 className="font-alt-heading text-[length:var(--text-mobile-h1)] leading-[1.02] font-light tracking-[-0.04em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
                     <span className="block">O conhecimento</span>
                     <span className="block bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent">
                       ganha forma.
@@ -77,7 +77,7 @@ export function SectionThree({ className }: SectionThreeProps) {
 
                   <div className="space-y-5">
                     <span className="block h-px w-[360px] bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent" />
-                    <p className="max-w-[560px] text-base leading-[1.55] text-[#d9e2ec] lg:text-[19px]">
+                    <p className="max-w-[560px] text-[length:var(--text-body)] leading-[1.55] text-text-secondary lg:text-[length:var(--text-body-lg)]">
                       <span className="text-[#35d6ff]">Mnemos Mundi</span> e um universo educacional onde o conhecimento tem peso, forma e valor - <span className="text-[#35e7ff]">e fica com voce para sempre.</span>
                     </p>
                   </div>
@@ -89,7 +89,7 @@ export function SectionThree({ className }: SectionThreeProps) {
           <div className="h-[33%] min-h-0 w-full shrink-0 pt-1 lg:pt-0">
             <div className="flex h-full w-full flex-col gap-3 lg:gap-4">
               <div className="flex h-[16%] min-h-0 w-full items-center justify-center px-2">
-                <p className="text-center font-[var(--font-space-grotesk)] text-sm font-light tracking-[0.26em] text-[#d9e2ec] lg:text-[20px] lg:tracking-[0.38em]">
+                <p className="text-center font-heading text-[length:var(--text-body-sm)] font-light tracking-[0.26em] text-text-secondary lg:text-[length:var(--text-body-lg)] lg:tracking-[0.38em]">
                   VOCE NAO APENAS APRENDE. VOCE SE TRANSFORMA.
                 </p>
               </div>
@@ -118,7 +118,7 @@ export function SectionThree({ className }: SectionThreeProps) {
                 <span className="h-[22px] w-[22px] rounded-full border border-[#5bc0eb]/70 shadow-[0_0_10px_rgba(91,192,235,0.4)] lg:h-[30px] lg:w-[30px]" />
               </div>
 
-              <p className="w-full text-center text-sm font-light leading-[1.35] text-[#d9e2ec] lg:text-[22px]">
+              <p className="w-full text-center text-[length:var(--text-body-sm)] font-light leading-[1.35] text-text-secondary lg:text-[length:var(--text-h4)]">
                 Nao e so sobre estudar. E sobre{" "}
                 <span className="bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent">
                   deixar sua marca
