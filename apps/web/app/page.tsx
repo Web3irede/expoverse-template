@@ -68,9 +68,9 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-[1920px] flex-col px-6 py-8 sm:px-10 md:px-16 lg:px-[100px] lg:py-[70px]">
-          <header className="flex min-h-[100px] items-start">
-            <div className="flex items-center gap-4 pt-4 lg:gap-[26px]">
+        <div className="page-shell section-shell relative z-10 flex min-h-[100svh] flex-col justify-between gap-12 lg:gap-16">
+          <header className="flex items-start">
+            <div className="flex flex-wrap items-center gap-4 pt-2 sm:pt-4 lg:gap-6">
               <div className="relative h-12 w-12 overflow-hidden rounded-full border border-cyan-200/50 shadow-[0_0_24px_rgba(91,192,235,0.25)] lg:h-14 lg:w-14">
                 <Image
                   src="/images/logo_oficial.png"
@@ -81,59 +81,62 @@ export default function Home() {
                 />
               </div>
 
-              <div className="space-y-1.5">
-                <p className="font-heading text-[length:var(--text-eyebrow)] font-medium tracking-[0.45em] text-text-secondary lg:text-[length:var(--text-body-lg)]">
+              <div className="min-w-0 space-y-1.5">
+                <p className="font-heading text-[length:var(--text-eyebrow)] font-medium tracking-[0.28em] text-text-secondary sm:tracking-[0.38em] lg:text-[length:var(--text-body-lg)] lg:tracking-[0.45em]">
                   MNEMOS MUNDI
                 </p>
-                <p className="text-[length:var(--text-caption)] tracking-[0.3em] text-text-muted lg:tracking-[0.4em]">
+                <p className="text-[length:var(--text-caption)] tracking-[0.18em] text-text-muted sm:tracking-[0.24em] lg:tracking-[0.4em]">
                   EXPLORE. APRENDA. TRANSFORME.
                 </p>
               </div>
             </div>
           </header>
 
-          <div className="flex flex-1 flex-col justify-between gap-12 lg:gap-0">
-            <div className="flex flex-1 items-center">
-              <div className="grid w-full grid-cols-1 gap-12 lg:grid-cols-[800px_minmax(0,1fr)] lg:gap-[72px]">
-                <article className="flex min-h-[420px] flex-col justify-start lg:pt-[40px]">
-                  <div className="max-w-[800px]">
-                    <h1 className="font-heading text-[length:var(--text-mobile-hero)] leading-[0.92] font-light tracking-[-0.035em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
-                      <span className="block">E se aprender</span>
-                      <span className="block">fosse uma</span>
-                      <span className="block bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(91,192,235,0.18)]">
-                        aventura
-                      </span>
-                      <span className="block">que nunca termina?</span>
-                    </h1>
+          <div className="flex flex-1 flex-col justify-center gap-12">
+            <div className="grid w-full flex-1 items-center gap-10 lg:grid-cols-[minmax(0,48rem)_minmax(0,1fr)] lg:gap-16 xl:gap-20">
+              <article className="flex min-h-0 flex-col justify-center py-4 lg:py-8">
+                <div className="max-w-[48rem]">
+                  <h1 className="font-heading text-[length:var(--text-mobile-hero)] leading-[0.92] font-light tracking-[-0.04em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
+                    <span className="block">E se aprender</span>
+                    <span className="block">fosse uma</span>
+                    <span className="block bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(91,192,235,0.18)]">
+                      aventura
+                    </span>
+                    <span className="block">que nunca termina?</span>
+                  </h1>
 
-                    <p className="mt-8 max-w-[550px] text-[length:var(--text-body)] leading-[1.35] text-text-secondary sm:text-[length:var(--text-body-lg)]">
-                      Explore mundos. Conquiste conhecimento.
-                      <br className="hidden sm:block" />
-                      Deixe seu legado no Mnemos Mundi.
-                    </p>
-                  </div>
-
-                  <div className="mt-10 lg:mt-[174px]">
-                    <button
-                      type="button"
-                      className="inline-flex h-[60px] items-center gap-3 rounded-full border border-[#50b4ff] bg-white/[0.08] px-5 text-[length:var(--text-body)] font-semibold text-text-primary shadow-[0_0_40px_rgba(80,180,255,0.22)] backdrop-blur-xl transition-colors hover:bg-white/[0.12]"
-                    >
-                      <span className="inline-flex h-[38px] w-[38px] items-center justify-center rounded-full border border-[#69e6ff] bg-[#071421] shadow-[0_0_20px_rgba(105,230,255,0.35)]" />
-                      <span className="font-heading text-[length:var(--text-body)] sm:text-[length:var(--text-body-lg)]">
-                        Entrar no Mnemos Mundi
-                      </span>
-                    </button>
-                  </div>
-                </article>
-
-                <div className="relative hidden min-h-[420px] lg:block">
-                  <div className="absolute inset-0 rounded-[32px] border border-white/10 bg-white/[0.02]" />
+                  <p className="mt-6 max-w-[34rem] text-[length:var(--text-body)] leading-[1.5] text-text-secondary sm:mt-8 sm:text-[length:var(--text-body-lg)]">
+                    Explore mundos. Conquiste conhecimento.
+                    <br className="hidden sm:block" />
+                    Deixe seu legado no Mnemos Mundi.
+                  </p>
                 </div>
+
+                <div className="mt-8 sm:mt-10 lg:mt-14">
+                  <button
+                    type="button"
+                    className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full border border-[#50b4ff] bg-white/[0.08] px-5 py-3 text-[length:var(--text-body)] font-semibold text-text-primary shadow-[0_0_40px_rgba(80,180,255,0.22)] backdrop-blur-xl transition-colors hover:bg-white/[0.12] sm:min-h-[60px] sm:w-auto"
+                  >
+                    <span className="inline-flex h-[38px] w-[38px] items-center justify-center rounded-full border border-[#69e6ff] bg-[#071421] shadow-[0_0_20px_rgba(105,230,255,0.35)]" />
+                    <span className="font-heading text-[length:var(--text-body)] sm:text-[length:var(--text-body-lg)]">
+                      Entrar no Mnemos Mundi
+                    </span>
+                  </button>
+                </div>
+              </article>
+
+              <div className="relative hidden min-h-[24rem] overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.02] lg:block">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(91,192,235,0.18),transparent_38%),radial-gradient(circle_at_72%_38%,rgba(157,125,255,0.16),transparent_34%),radial-gradient(circle_at_52%_78%,rgba(53,214,255,0.12),transparent_28%)]" />
+                <div className="absolute inset-x-[12%] top-[14%] h-px bg-gradient-to-r from-transparent via-white/35 to-transparent" />
+                <div className="absolute inset-x-[18%] bottom-[20%] h-px bg-gradient-to-r from-transparent via-[#5bc0eb]/35 to-transparent" />
+                <div className="absolute left-[18%] top-[18%] h-[7rem] w-[7rem] rounded-full border border-[#5bc0eb]/30 bg-[#0b1220]/40 shadow-[0_0_40px_rgba(91,192,235,0.18)]" />
+                <div className="absolute right-[16%] top-[26%] h-[5rem] w-[5rem] rounded-full border border-[#9d7dff]/30 bg-[#101624]/40 shadow-[0_0_34px_rgba(157,125,255,0.18)]" />
+                <div className="absolute bottom-[16%] left-[34%] h-[8.5rem] w-[8.5rem] rounded-full border border-white/10 bg-[#081126]/50 shadow-[0_0_48px_rgba(53,214,255,0.12)]" />
               </div>
             </div>
 
-            <div className="flex w-full justify-center lg:justify-end">
-              <div className="scroll-indicator flex w-fit flex-col items-center justify-center gap-2 text-text-secondary lg:mr-[742px] lg:min-h-[104px] lg:w-[236px]">
+            <div className="flex w-full justify-center lg:center">
+              <div className="scroll-indicator flex w-fit flex-col items-center justify-center gap-2 text-text-secondary">
                 <div className="flex h-10 w-6 items-start justify-center rounded-full border border-white/70 p-1">
                   <span className="scroll-indicator__wheel h-2 w-2 rounded-full bg-white/80" />
                 </div>
