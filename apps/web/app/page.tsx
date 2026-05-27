@@ -24,7 +24,7 @@ export default function Home() {
         />
 
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 w-[min(980px,62vw)]"
+          className="pointer-events-none absolute inset-y-0 left-0 hidden w-[min(980px,62vw)] sm:block"
           style={{
             background:
               "linear-gradient(90deg, rgba(2,5,13,0.85) 0%, rgba(2,5,13,0.67) 52%, rgba(2,5,13,0) 100%)",
@@ -33,7 +33,7 @@ export default function Home() {
         />
 
         <div
-          className="pointer-events-none absolute left-[-220px] top-[160px] h-[780px] w-[780px] rounded-full blur-[54px]"
+          className="pointer-events-none absolute left-[-140px] top-[120px] h-[420px] w-[420px] rounded-full blur-[48px] sm:left-[-220px] sm:top-[160px] sm:h-[780px] sm:w-[780px] sm:blur-[54px]"
           style={{
             background:
               "radial-gradient(circle, rgba(87,200,255,0.10) 0%, rgba(32,74,143,0.08) 50%, rgba(0,0,0,0) 100%)",
@@ -42,7 +42,7 @@ export default function Home() {
         />
 
         <div
-          className="pointer-events-none absolute right-[-160px] top-[-120px] h-[820px] w-[820px] rounded-full blur-[62px]"
+          className="pointer-events-none absolute right-[-140px] top-[-90px] h-[360px] w-[360px] rounded-full blur-[44px] sm:right-[-160px] sm:top-[-120px] sm:h-[820px] sm:w-[820px] sm:blur-[62px]"
           style={{
             background:
               "radial-gradient(circle, rgba(111,231,255,0.12) 0%, rgba(45,111,255,0.09) 54%, rgba(0,0,0,0) 100%)",
@@ -51,7 +51,7 @@ export default function Home() {
         />
 
         <div
-          className="pointer-events-none absolute right-[-280px] bottom-[-60px] h-[760px] w-[980px] rounded-full blur-[70px]"
+          className="pointer-events-none absolute bottom-[-140px] right-[-220px] hidden h-[760px] w-[980px] rounded-full blur-[70px] md:block"
           style={{
             background:
               "radial-gradient(circle, rgba(45,111,255,0.18) 0%, rgba(29,79,155,0.12) 55%, rgba(0,0,0,0) 100%)",
@@ -68,7 +68,7 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        <div className="page-shell section-shell relative z-10 flex min-h-[100svh] flex-col justify-between gap-12 lg:gap-16">
+        <div className="page-shell relative z-10 flex min-h-[100svh] flex-col px-4 py-6 sm:px-6 sm:py-8 md:px-10 lg:px-16 lg:py-12">
           <header className="flex items-start">
             <div className="flex flex-wrap items-center gap-4 pt-2 sm:pt-4 lg:gap-6">
               <div className="relative h-12 w-12 overflow-hidden rounded-full border border-cyan-200/50 shadow-[0_0_24px_rgba(91,192,235,0.25)] lg:h-14 lg:w-14">
@@ -92,8 +92,8 @@ export default function Home() {
             </div>
           </header>
 
-          <div className="flex flex-1 flex-col justify-center gap-12">
-            <div className="grid w-full flex-1 items-center gap-10 lg:grid-cols-[minmax(0,48rem)_minmax(0,1fr)] lg:gap-16 xl:gap-20">
+          <div className="flex flex-1 flex-col justify-center gap-10 sm:gap-12">
+            <div className="grid w-full flex-1 items-center gap-10 lg:grid-cols-[minmax(0,48rem)_minmax(0,1fr)] lg:gap-16">
               <article className="flex min-h-0 flex-col justify-center py-4 lg:py-8">
                 <div className="max-w-[48rem]">
                   <h1 className="font-heading text-[length:var(--text-mobile-hero)] leading-[0.92] font-light tracking-[-0.04em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
@@ -135,8 +135,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex w-full justify-center lg:center">
-              <div className="scroll-indicator flex w-fit flex-col items-center justify-center gap-2 text-text-secondary">
+            <div className="mt-8 flex w-full justify-center lg:mt-0">
+              <div className="scroll-indicator flex w-fit self-center flex-col items-center justify-center gap-2 text-text-secondary lg:self-end">
                 <div className="flex h-10 w-6 items-start justify-center rounded-full border border-white/70 p-1">
                   <span className="scroll-indicator__wheel h-2 w-2 rounded-full bg-white/80" />
                 </div>
