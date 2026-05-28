@@ -4,7 +4,6 @@ type ProblemStatCardProps = {
   value: ReactNode;
   description: string;
   source: string;
-  showDivider?: boolean;
   valueSize?: "xl" | "md";
   className?: string;
 };
@@ -13,30 +12,27 @@ export function ProblemStatCard({
   value,
   description,
   source,
-  showDivider = false,
   valueSize = "xl",
   className,
 }: ProblemStatCardProps) {
   return (
     <article
       className={[
-        "flex w-full items-center gap-7",
-        "px-0",
-        showDivider ? "border-b border-white/[0.08]" : "",
+        "flex w-full flex-col gap-3 sm:flex-row sm:items-center sm:gap-4",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="h-[92px] w-[92px] shrink-0 rounded-full border border-[#9d7dff73] shadow-[0_0_20px_rgba(157,125,255,0.12)]" />
+      <div className="h-14 w-14 shrink-0 rounded-full border border-[#9d7dff73] shadow-[0_0_16px_rgba(157,125,255,0.12)] sm:h-16 sm:w-16" />
 
-      <div className="flex w-full max-w-[396px] flex-col gap-2.5">
+      <div className="flex w-full min-w-0 flex-col gap-2">
         <h3
           className={[
             "font-heading font-bold text-[#9d7dff] [text-shadow:0_0_24px_rgba(185,140,255,0.28)]",
             valueSize === "xl"
-              ? "text-[length:var(--text-h2)] leading-[1.05] lg:text-[length:var(--text-display)]"
-              : "text-[length:var(--text-h3)] leading-[1.14] lg:text-[length:var(--text-h2)]",
+              ? "text-[length:var(--text-h3)] leading-[1.02] lg:text-[length:var(--text-h2)]"
+              : "text-[length:var(--text-h4)] leading-[1.1] lg:text-[length:var(--text-h3)]",
           ]
             .filter(Boolean)
             .join(" ")}
@@ -44,11 +40,11 @@ export function ProblemStatCard({
           {value}
         </h3>
 
-        <p className="text-[length:var(--text-body)] leading-[1.4] text-text-secondary lg:text-[length:var(--text-body-lg)]">
+        <p className="max-w-[24rem] text-[length:var(--text-body-sm)] leading-[1.45] text-text-secondary sm:text-[length:var(--text-body)]">
           {description}
         </p>
 
-        <p className="text-[length:var(--text-caption)] leading-[1.3] font-light text-text-muted lg:text-[length:var(--text-body-sm)]">
+        <p className="text-[length:var(--text-caption)] leading-[1.25] font-light text-text-muted">
           {source}
         </p>
       </div>

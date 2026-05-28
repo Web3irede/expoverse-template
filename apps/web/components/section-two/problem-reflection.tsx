@@ -14,21 +14,21 @@ export function ProblemReflection({
   return (
     <div
       className={[
-        "flex w-full max-w-[760px] flex-col items-center gap-[14px] text-center",
+        "flex w-full max-w-[40rem] flex-col items-center gap-3 px-2 text-center sm:gap-4",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <p className="w-full text-[length:var(--text-body-lg)] leading-[1.35] text-text-secondary lg:text-[length:var(--text-h4)]">
+      <p className="w-full text-[length:var(--text-body)] leading-[1.4] text-text-secondary sm:text-[length:var(--text-body-lg)]">
         {text}
       </p>
 
-      <p className="w-full text-[length:var(--text-body-lg)] font-medium leading-[1.35] text-[#9d7dff] [text-shadow:0_0_8px_rgba(157,125,255,0.35)] lg:text-[length:var(--text-h4)]">
+      <p className="w-full text-[length:var(--text-body)] font-medium leading-[1.4] text-[#9d7dff] [text-shadow:0_0_8px_rgba(157,125,255,0.35)] sm:text-[length:var(--text-body-lg)]">
         {highlight}
       </p>
 
-      <ProblemBrandSignature />
+      <ProblemBrandSignature className="pt-1" />
     </div>
   );
 }
