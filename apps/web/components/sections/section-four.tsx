@@ -1,6 +1,4 @@
-type SectionFourProps = {
-  className?: string;
-};
+import React from "react";
 
 const journeyCards = [
   {
@@ -8,145 +6,370 @@ const journeyCards = [
     title: "Lucas entra\nno campus",
     description: "Descricao da etapa em jornada viva de conhecimento.",
     accent: "#5bc0eb",
-    orb: "#39c8ff47",
+    orbColor: "rgba(57,200,255,0.28)",
+    orbGlow: "rgba(57,200,255,0.18)",
+    borderColor: "rgba(91,192,235,0.25)",
   },
   {
     step: "02",
     title: "Ele escolhe\nAstronomia",
     description: "Descricao da etapa em jornada viva de conhecimento.",
     accent: "#5bc0eb",
-    orb: "#39c8ff47",
+    orbColor: "rgba(57,200,255,0.28)",
+    orbGlow: "rgba(57,200,255,0.18)",
+    borderColor: "rgba(91,192,235,0.25)",
   },
   {
     step: "03",
     title: "Um quiz aparece\nao lado de Saturno",
     description: "Descricao da etapa em jornada viva de conhecimento.",
     accent: "#9d7dff",
-    orb: "#8b6bff47",
+    orbColor: "rgba(139,107,255,0.28)",
+    orbGlow: "rgba(139,107,255,0.18)",
+    borderColor: "rgba(157,125,255,0.25)",
   },
   {
     step: "04",
     title: "Ele acerta e ganha\nKnowledge Crystals",
     description: "Descricao da etapa em jornada viva de conhecimento.",
     accent: "#f4c95d",
-    orb: "#ffb34747",
+    orbColor: "rgba(255,179,71,0.28)",
+    orbGlow: "rgba(255,179,71,0.18)",
+    borderColor: "rgba(244,201,93,0.25)",
   },
   {
     step: "05",
     title: "Tudo e registrado\nna blockchain",
     description: "Descricao da etapa em jornada viva de conhecimento.",
     accent: "#5bc0eb",
-    orb: "#39c8ff47",
+    orbColor: "rgba(57,200,255,0.28)",
+    orbGlow: "rgba(57,200,255,0.18)",
+    borderColor: "rgba(91,192,235,0.25)",
   },
   {
     step: "06",
     title: "E o mundo continua\nse expandindo",
     description: "Descricao da etapa em jornada viva de conhecimento.",
     accent: "#7bd389",
-    orb: "#7bd38947",
+    orbColor: "rgba(123,211,137,0.28)",
+    orbGlow: "rgba(123,211,137,0.18)",
+    borderColor: "rgba(123,211,137,0.25)",
   },
-] as const;
+];
 
-export function SectionFour({ className }: SectionFourProps) {
+function JourneyCard({ card, index }: { card: any; index: number }) {
+  const [hovered, setHovered] = React.useState(false);
+
   return (
-    <section
-      aria-label="Sessao 4"
-      className={[
-        "relative h-[100svh] min-h-0 overflow-hidden bg-background text-foreground",
-        className,
-      ]
-        .filter(Boolean)
-        .join(" ")}
+    <article
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "12px",
+        borderRadius: "20px",
+        border: `1px solid ${hovered ? card.accent + "50" : card.borderColor}`,
+        background: hovered ? "rgba(20,30,60,0.75)" : "rgba(14,20,50,0.55)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        padding: "20px 16px",
+        textAlign: "center",
+        transition: "border-color 0.25s ease, background 0.25s ease, transform 0.2s ease",
+        transform: hovered ? "translateY(-3px)" : "translateY(0)",
+        animationDelay: `${index * 80}ms`,
+      }}
     >
-      <div className="mx-auto flex h-full w-full max-w-[1920px] flex-col px-6 py-4 sm:px-10 md:px-16 lg:px-16 lg:py-6">
-        <div className="mx-auto grid h-full w-full max-w-[1760px] min-h-0 grid-rows-2 gap-0">
-          <div className="flex min-h-0 w-full gap-5 lg:gap-6">
-            <div className="h-full w-[700px] shrink-0">
-              <div className="flex w-full max-w-[580px] flex-col gap-5 px-4 pt-2 pb-2 lg:gap-7 lg:px-4 lg:pt-3">
-                <div className="flex items-center gap-4">
-                  <span
-                    className="h-[18px] w-[18px] rounded-full border border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
-                    aria-hidden="true"
-                  />
-                  <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.32em] text-[#5bc0eb]">
-                    EXPERIENCIA
-                  </p>
-                  <span
-                    className="h-px w-[220px] bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent"
-                    aria-hidden="true"
-                  />
-                </div>
+      {/* Step badge */}
+      <div
+        style={{
+          width: "36px",
+          height: "36px",
+          borderRadius: "50%",
+          border: `1px solid ${card.accent}55`,
+          background: "rgba(27,47,85,0.85)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexShrink: 0,
+        }}
+      >
+        <span
+          style={{
+            fontSize: "13px",
+            fontWeight: 700,
+            color: card.accent,
+            letterSpacing: "0.04em",
+          }}
+        >
+          {card.step}
+        </span>
+      </div>
 
-                <h2 className="font-heading text-[length:var(--text-mobile-h1)] font-light leading-[0.95] tracking-[-0.04em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
-                  <span className="block">Aprender aqui e</span>
-                  <span className="block">
-                    <span className="bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent [text-shadow:0_0_18px_rgba(91,192,235,0.22)]">
-                      viver
-                    </span>
-                    <span> o conhecimento.</span>
-                  </span>
-                </h2>
+      {/* Orb visual */}
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "120px",
+          aspectRatio: "1 / 1",
+          borderRadius: "16px",
+          border: "1px solid rgba(125,220,255,0.2)",
+          background: "rgba(16,28,68,0.7)",
+          position: "relative",
+          overflow: "hidden",
+          boxShadow: hovered ? `0 0 24px ${card.orbGlow}` : "none",
+          transition: "box-shadow 0.25s ease",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "55%",
+              height: "55%",
+              borderRadius: "50%",
+              background: card.orbColor,
+              transition: "transform 0.3s ease",
+              transform: hovered ? "scale(1.15)" : "scale(1)",
+            }}
+          />
+        </div>
+      </div>
 
-                <div className="space-y-4">
-                  <span className="block h-px w-[320px] bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent" />
-                  <div className="w-[560px] space-y-1">
-                    <p className="text-[length:var(--text-body-lg)] leading-[1.55] text-text-secondary lg:text-[length:var(--text-h4)]">
-                      Lucas entra no Mnemos Mundi. Escolhe Astronomia. Responde,
-                      conquista e deixa seu legado registrado na blockchain.
-                    </p>
-                    <p className="text-[length:var(--text-body-lg)] leading-[1.55] font-semibold text-[#5bc0eb] [text-shadow:0_0_8px_rgba(91,192,235,0.4)] lg:text-[length:var(--text-h4)]">
-                      Para sempre.
-                    </p>
-                  </div>
-                </div>
-              </div>
+      {/* Title */}
+      <p
+        style={{
+          whiteSpace: "pre-line",
+          color: card.accent,
+          fontWeight: 600,
+          fontSize: "clamp(12px, 1.8vw, 14px)",
+          lineHeight: 1.25,
+          margin: 0,
+        }}
+      >
+        {card.title}
+      </p>
+
+      {/* Description */}
+      <p
+        style={{
+          color: "rgba(160,185,230,0.75)",
+          fontSize: "clamp(11px, 1.5vw, 12px)",
+          lineHeight: 1.5,
+          margin: 0,
+        }}
+      >
+        {card.description}
+      </p>
+    </article>
+  );
+}
+
+export function SectionFour({ className }: { className?: string }) {
+  return (
+    <>
+      <style>{`
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .section-four-header { animation: fadeUp 0.6s ease both; }
+        .section-four-card   { animation: fadeUp 0.5s ease both; }
+
+        .section-four-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+        @media (min-width: 640px) {
+          .section-four-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        }
+        @media (min-width: 900px) {
+          .section-four-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        }
+
+        .section-four-heading {
+          font-size: clamp(2rem, 5vw, 3.5rem);
+        }
+        @media (min-width: 1280px) {
+          .section-four-heading { font-size: clamp(3rem, 4.5vw, 4.5rem); }
+        }
+      `}</style>
+
+      <section
+        aria-labelledby="section-four-heading"
+        className={className}
+        style={{
+          position: "relative",
+          minHeight: "100svh",
+          background: "#050c1f",
+          color: "#e8f0ff",
+          padding: "clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px)",
+          overflow: "hidden",
+        }}
+      >
+        {/* Ambient background glow */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: "-15%",
+            left: "-10%",
+            width: "60%",
+            height: "60%",
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(42,130,220,0.07) 0%, transparent 70%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <div
+          style={{
+            position: "relative",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: "clamp(36px, 5vw, 56px)",
+          }}
+        >
+          {/* ── Header ── */}
+          <header
+            className="section-four-header"
+            style={{ maxWidth: "680px", display: "flex", flexDirection: "column", gap: "20px" }}
+          >
+            {/* Eyebrow */}
+            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+              <span
+                aria-hidden="true"
+                style={{
+                  width: "14px",
+                  height: "14px",
+                  borderRadius: "50%",
+                  border: "1px solid #33d1ff",
+                  boxShadow: "0 0 10px rgba(51,209,255,0.45)",
+                  flexShrink: 0,
+                }}
+              />
+              <p
+                style={{
+                  fontSize: "11px",
+                  fontWeight: 600,
+                  letterSpacing: "0.28em",
+                  color: "#5bc0eb",
+                  margin: 0,
+                  textTransform: "uppercase",
+                }}
+              >
+                Experiencia
+              </p>
             </div>
 
-            <div className="h-full min-w-0 flex-1" />
-          </div>
+            {/* Heading */}
+            <h2
+              id="section-four-heading"
+              className="section-four-heading"
+              style={{
+                fontWeight: 300,
+                lineHeight: 0.96,
+                letterSpacing: "-0.04em",
+                margin: 0,
+                color: "#e8f0ff",
+              }}
+            >
+              <span style={{ display: "block" }}>Aprender aqui e</span>
+              <span style={{ display: "block" }}>
+                <span
+                  style={{
+                    background: "linear-gradient(90deg, #5bc0eb, #9d7dff)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  viver
+                </span>
+                <span> o conhecimento.</span>
+              </span>
+            </h2>
 
-          <div className="relative min-h-0 w-full">
-            <div className="absolute left-5 top-10 flex h-[332px] w-[1712px] items-start gap-4">
-              {journeyCards.map((card) => (
+            {/* Separator */}
+            <div
+              aria-hidden="true"
+              style={{
+                height: "1px",
+                width: "min(320px, 100%)",
+                background: "linear-gradient(to right, #2ad0ff, transparent)",
+              }}
+            />
+
+            {/* Body copy */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+              <p
+                style={{
+                  fontSize: "clamp(15px, 1.8vw, 18px)",
+                  lineHeight: 1.6,
+                  color: "rgba(190,215,255,0.7)",
+                  margin: 0,
+                  maxWidth: "480px",
+                }}
+              >
+                Lucas entra no Mnemos Mundi. Escolhe Astronomia. Responde,
+                conquista e deixa seu legado registrado na blockchain.
+              </p>
+              <p
+                style={{
+                  fontSize: "clamp(15px, 1.8vw, 18px)",
+                  lineHeight: 1.6,
+                  fontWeight: 600,
+                  color: "#5bc0eb",
+                  margin: 0,
+                  textShadow: "0 0 8px rgba(91,192,235,0.4)",
+                }}
+              >
+                Para sempre.
+              </p>
+            </div>
+          </header>
+
+          {/* ── Connector line (lg+) ── */}
+          <div aria-hidden="true" style={{ position: "relative" }}>
+            <div
+              style={{
+                position: "absolute",
+                top: "44px",
+                left: "8%",
+                right: "8%",
+                height: "1px",
+                background: "linear-gradient(to right, transparent, rgba(42,208,255,0.25), transparent)",
+                pointerEvents: "none",
+              }}
+            />
+
+            {/* ── Cards grid ── */}
+            <div className="section-four-grid">
+              {journeyCards.map((card, i) => (
                 <div
                   key={card.step}
-                  className="flex h-[332px] w-[272px] shrink-0 flex-col items-center gap-3 rounded-[28px] border border-[#78dcff2e] bg-[#141e3c6b] px-[18px] py-4 backdrop-blur-[16px]"
+                  className="section-four-card"
+                  style={{ animationDelay: `${i * 80}ms` }}
                 >
-                  <div
-                    className="relative h-[38px] w-[38px] rounded-full bg-[#1b2f55d9]"
-                    style={{ border: `1px solid ${card.accent}73` }}
-                  >
-                    <span
-                      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[length:var(--text-body-lg)] font-bold"
-                      style={{ color: card.accent }}
-                    >
-                      {card.step}
-                    </span>
-                  </div>
-
-                  <div className="relative h-[124px] w-[124px] rounded-[20px] border border-[#7ddcff5c] bg-[#1a2e57a3] shadow-[0_0_20px_rgba(57,200,255,0.3)]">
-                    <div
-                      className="absolute left-1/2 top-1/2 h-[60px] w-[60px] -translate-x-1/2 -translate-y-1/2 rounded-full shadow-[0_0_16px_rgba(57,200,255,0.4)]"
-                      style={{ background: card.orb }}
-                    />
-                  </div>
-
-                  <p
-                    className="w-[226px] text-center font-heading text-[length:var(--text-body)] font-semibold leading-[1.18] lg:text-[length:var(--text-body-lg)]"
-                    style={{ color: card.accent }}
-                  >
-                    {card.title}
-                  </p>
-
-                  <p className="w-[226px] text-center text-[length:var(--text-caption)] font-normal leading-[1.45] text-text-secondary lg:text-[length:var(--text-body-sm)]">
-                    {card.description}
-                  </p>
+                  <JourneyCard card={card} index={i} />
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

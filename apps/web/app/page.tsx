@@ -156,7 +156,7 @@ export default function Home() {
 
       <SectionTwo />
       <SectionThree />
-      <SectionFour />
+      <SectionFour className="section-four" />
       <SectionFive />
       <SectionSix className="section-six" />
       <SectionSeven />
