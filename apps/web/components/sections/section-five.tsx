@@ -6,7 +6,7 @@ function SmartContractsCard() {
   return (
     <article
       className="
-  relative flex flex-col items-start gap-4 overflow-hidden
+  relative flex flex-col items-start gap-3 overflow-hidden
   rounded-[28px]
   border border-[#7ecbff80]
   bg-[linear-gradient(145deg,rgba(12,28,58,0.72)_0%,rgba(8,18,42,0.66)_55%,rgba(16,39,78,0.58)_100%)]
@@ -17,7 +17,7 @@ function SmartContractsCard() {
   before:bg-[linear-gradient(135deg,rgba(180,235,255,0.42)_0%,rgba(91,192,235,0.16)_28%,transparent_52%,rgba(91,192,235,0.22)_100%)]
   before:[mask:linear-gradient(#000_0_0)_content-box,linear-gradient(#000_0_0)]
   before:p-px before:[mask-composite:exclude]
-  sm:flex-row sm:items-center sm:gap-5 sm:px-5
+  lg:flex-row lg:items-center lg:gap-5 lg:px-5
 "
     >
       <span
@@ -25,9 +25,10 @@ function SmartContractsCard() {
         aria-hidden="true"
       />
 
-      <div className="relative h-24 w-24 shrink-0 rounded-full border border-[#bfefff8c] bg-[radial-gradient(circle_at_center,rgba(32,75,122,0.8)_0%,rgba(20,49,95,0.72)_55%,rgba(11,24,51,0.9)_100%)] shadow-[0_0_18px_rgba(56,182,255,0.42),0_0_10px_rgba(166,230,255,0.22)] sm:h-32 sm:w-32 lg:h-40 lg:w-40" />
+      {/* Circle — smaller on mobile/tablet, full size only on lg+ */}
+      <div className="relative h-16 w-16 shrink-0 rounded-full border border-[#bfefff8c] bg-[radial-gradient(circle_at_center,rgba(32,75,122,0.8)_0%,rgba(20,49,95,0.72)_55%,rgba(11,24,51,0.9)_100%)] shadow-[0_0_18px_rgba(56,182,255,0.42),0_0_10px_rgba(166,230,255,0.22)] sm:h-20 sm:w-20 lg:h-36 lg:w-36" />
 
-      <div className="relative z-10 w-full min-w-0 space-y-2 sm:flex-1">
+      <div className="relative z-10 w-full min-w-0 space-y-2 lg:flex-1">
         <h4 className="font-heading text-[length:var(--text-body-lg)] font-semibold tracking-[0.035em] text-[#5bc0eb]">
           1. SMART CONTRACTS
         </h4>
@@ -109,8 +110,8 @@ export function SectionFive({ className }: SectionFiveProps) {
           </div>
 
           {/* Cards row */}
-          <div className="w-full rounded-[28px]">
-            <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-[minmax(0,28rem)_minmax(0,1fr)_minmax(0,28rem)] lg:gap-10">
+          <div className="w-full overflow-hidden rounded-[28px]">
+            <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,18rem)_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[minmax(0,28rem)_minmax(0,1fr)_minmax(0,28rem)] xl:gap-10">
               {/* Left column */}
               <div className="flex flex-col gap-5">
                 <SmartContractsCard />
@@ -148,7 +149,7 @@ export function SectionFive({ className }: SectionFiveProps) {
                           rounded-[28px]
                           border border-[#f4c95d30]
                           bg-[linear-gradient(145deg,rgba(10,18,39,0.92)_0%,rgba(9,15,32,0.86)_55%,rgba(23,38,74,0.68)_100%)]
-                          px-5 py-3
+                          px-5 py-4
                           shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_0_0_1px_rgba(244,201,93,0.08),0_0_36px_rgba(244,201,93,0.18)]
                           backdrop-blur-[24px]
                           before:pointer-events-none
@@ -159,7 +160,8 @@ export function SectionFive({ className }: SectionFiveProps) {
                           before:[mask:linear-gradient(#000_0_0)_content-box,linear-gradient(#000_0_0)]
                           before:[mask-composite:exclude]
                           before:p-px
-                          lg:flex-row lg:items-center lg:justify-between lg:gap-5"
+                          sm:flex-row sm:items-center sm:gap-5 sm:py-3
+                          lg:justify-between"
             >
               {/* Glow decorativo */}
               <span
@@ -170,29 +172,32 @@ export function SectionFive({ className }: SectionFiveProps) {
                 aria-hidden="true"
               />
 
-              <div className="relative flex h-[76px] w-[76px] shrink-0 items-center justify-center self-center rounded-full border border-[#f4c95d80] bg-[radial-gradient(circle_at_center,rgba(255,217,120,0.16)_0%,rgba(255,217,120,0.05)_65%,transparent_100%)] shadow-[0_0_26px_rgba(244,201,93,0.34)] lg:self-auto">
+              {/* Icon */}
+              <div className="relative flex h-[64px] w-[64px] shrink-0 items-center justify-center self-center rounded-full border border-[#f4c95d80] bg-[radial-gradient(circle_at_center,rgba(255,217,120,0.16)_0%,rgba(255,217,120,0.05)_65%,transparent_100%)] shadow-[0_0_26px_rgba(244,201,93,0.34)] sm:h-[76px] sm:w-[76px]">
                 <span className="text-[length:var(--text-h3)] text-[#f4c95d]">
                   🛡
                 </span>
               </div>
 
-              <div className="relative min-w-0 flex-1 space-y-1 text-center lg:text-left">
+              {/* Title text */}
+              <div className="relative w-full min-w-0 flex-1 space-y-1 text-center sm:text-left">
                 <p className="font-heading text-[length:var(--text-body-lg)] font-medium text-text-primary lg:text-[length:var(--text-h4)]">
                   O conhecimento so tem valor real
                 </p>
 
                 <p className="font-heading text-[length:var(--text-body-lg)] font-medium text-text-primary lg:text-[length:var(--text-h4)]">
                   <span>quando pode </span>
-
                   <span className="bg-gradient-to-r from-[#f4c95d] to-[#ffd978] bg-clip-text text-transparent">
                     permanecer.
                   </span>
                 </p>
               </div>
 
+              {/* Divider — only at lg+ */}
               <div className="relative hidden h-[64px] w-px shrink-0 bg-gradient-to-b from-transparent via-[#ffffff30] to-transparent lg:block" />
 
-              <p className="relative w-full text-center text-[length:var(--text-body-sm)] leading-[1.45] text-text-secondary lg:w-[34%] lg:min-w-[180px] lg:text-left lg:text-[length:var(--text-body-lg)]">
+              {/* Description */}
+              <p className="relative w-full min-w-0 text-center text-[length:var(--text-body-sm)] leading-[1.45] text-text-secondary sm:w-auto sm:max-w-[220px] sm:text-left lg:w-[34%] lg:min-w-[180px] lg:text-[length:var(--text-body-lg)]">
                 Web3 nao e sobre moda.
                 <br />
                 E sobre construir confianca,
