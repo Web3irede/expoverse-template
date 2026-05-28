@@ -18,37 +18,37 @@ export function FeatureCard({
   return (
     <div
       className={[
-        "flex h-full min-h-0 flex-col justify-between px-4 py-5 lg:px-8 lg:py-8",
-        showDivider ? "border-r border-white/[0.07]" : "",
+        "flex flex-col justify-between gap-6 rounded-2xl border border-white/10 p-5 sm:p-6",
+        showDivider ? "xl:border-r xl:border-white/10" : "",
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="space-y-5 text-center">
-        <div className="mx-auto h-12 w-12 rounded-full border border-white/20 bg-white/5 lg:h-[84px] lg:w-[84px]" />
+      <div className="space-y-4 text-center sm:space-y-5">
+        <div className="mx-auto h-12 w-12 rounded-full border border-white/20 bg-white/5 lg:h-[72px] lg:w-[72px]" />
 
         <div className="space-y-2">
           <h3
             className={[
-              "font-alt-heading text-[length:var(--text-body-lg)] font-semibold leading-none lg:text-[length:var(--text-h2)]",
+              "font-alt-heading text-[length:var(--text-body-lg)] font-semibold leading-none lg:text-[length:var(--text-h3)]",
               titleColorClass,
             ].join(" ")}
           >
             {title}
           </h3>
 
-          <p className="text-center text-[length:var(--text-caption)] leading-[1.6] text-text-secondary lg:text-[length:var(--text-body-sm)]">
+          <p className="text-center text-[length:var(--text-caption)] leading-[1.6] text-text-secondary sm:text-[length:var(--text-body-sm)]">
             {description}
           </p>
         </div>
       </div>
 
       <div className="flex items-center justify-center gap-4">
-        <span className="h-px w-10 bg-white/35 lg:w-20" />
-        <p className={["text-[length:var(--text-caption)] lg:text-[length:var(--text-body)]", indexColorClass].join(" ")}>
+        <span className="h-px w-10 bg-white/35 lg:w-16" />
+        <p className={["text-[length:var(--text-caption)] sm:text-[length:var(--text-body-sm)]", indexColorClass].join(" ")}>
           {indexLabel}
         </p>
-        <span className="h-px w-10 bg-white/35 lg:w-20" />
+        <span className="h-px w-10 bg-white/35 lg:w-16" />
       </div>
     </div>
   );
