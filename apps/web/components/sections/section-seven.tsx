@@ -47,9 +47,19 @@ export function SectionSeven({ className }: SectionSevenProps) {
       <div className="mx-auto flex h-full w-full max-w-[1920px] flex-col px-4 pt-4 pb-1 sm:px-10 md:px-16 lg:px-8 lg:pt-6 lg:pb-1">
         <div className="mx-auto flex h-full w-full max-w-[1760px] min-h-0 flex-col items-center gap-3 lg:gap-4">
           <div className="flex h-[4%] w-[390px] shrink-0 items-center justify-center ">
-            <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.42em] text-[#5bc0eb]">
-              IMPACTO
-            </p>
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                  <span
+                    className="h-[18px] w-[18px] rounded-full border border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
+                    aria-hidden="true"
+                  />
+                  <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.22em] text-[#5bc0eb] sm:tracking-[0.32em]">
+                    IMPACTO
+                  </p>
+                  <span
+                    className="hidden h-px max-w-40 flex-1 bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent sm:block"
+                    aria-hidden="true"
+                  />
+                </div>
           </div>
 
           <div className="flex h-[8%] w-full shrink-0 items-center justify-center ">

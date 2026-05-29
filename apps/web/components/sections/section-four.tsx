@@ -261,16 +261,9 @@ export function SectionFour({ className }: { className?: string }) {
                     }}
                   />
                   <p
-                    style={{
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      letterSpacing: "0.28em",
-                      color: "#5bc0eb",
-                      margin: 0,
-                      textTransform: "uppercase",
-                    }}
+                    className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.22em] text-[#5bc0eb] sm:tracking-[0.32em]"
                   >
-                    Experiencia
+                    EXPERIÊNCIA
                   </p>
                 </div>
 
@@ -316,7 +309,7 @@ export function SectionFour({ className }: { className?: string }) {
                 <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                   <p
                     style={{
-                      fontSize: "clamp(15px, 1.8vw, 18px)",
+                      fontSize: "space-y-1 text-[length:var(--text-body)] leading-[1.4] text-text-secondary lg:text-[length:var(--text-body-md)] lg:leading-[1.32]",
                       lineHeight: 1.6,
                       color: "rgba(190,215,255,0.7)",
                       margin: 0,
@@ -328,7 +321,7 @@ export function SectionFour({ className }: { className?: string }) {
                   </p>
                   <p
                     style={{
-                      fontSize: "clamp(15px, 1.8vw, 18px)",
+                      fontSize: "space-y-1 text-[length:var(--text-body)] leading-[1.4] text-text-secondary lg:text-[length:var(--text-body-md)] lg:leading-[1.32]",
                       lineHeight: 1.6,
                       fontWeight: 600,
                       color: "#5bc0eb",

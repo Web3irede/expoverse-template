@@ -79,7 +79,7 @@ export function SectionThree({ className }: SectionThreeProps) {
 
                 <div className="space-y-2.5">
                   <span className="hidden h-px w-full max-w-72 bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent sm:block" />
-                  <p className="max-w-[34rem] text-[length:var(--text-body)] leading-[1.45] text-text-secondary sm:text-[length:var(--text-body)] lg:text-[length:var(--text-body-lg)]">
+                  <p className="space-y-1 text-[length:var(--text-body)] leading-[1.4] text-text-secondary lg:text-[length:var(--text-body-md)] lg:leading-[1.32]">
                     <span className="text-[#35d6ff]">Mnemos Mundi</span> e um
                     universo educacional onde o conhecimento tem peso, forma e
                     valor -{" "}
