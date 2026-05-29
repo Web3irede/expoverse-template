@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 const journeyCards = [
@@ -57,7 +59,9 @@ const journeyCards = [
   },
 ];
 
-function JourneyCard({ card, index }: { card: any; index: number }) {
+type JourneyCardData = (typeof journeyCards)[number];
+
+function JourneyCard({ card, index }: { card: JourneyCardData; index: number }) {
   const [hovered, setHovered] = React.useState(false);
 
   return (
