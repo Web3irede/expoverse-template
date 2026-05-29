@@ -22,8 +22,8 @@ export function SectionTwo({ className }: SectionTwoProps) {
     >
       <div className="page-shell section-shell h-full">
         <div className="page-shell--wide mx-auto flex h-full w-full flex-col justify-center gap-8 lg:gap-10">
-          <div className="grid w-full grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1.1fr)_minmax(18rem,28rem)] xl:items-center xl:gap-12">
-            <div className="flex w-full items-start">
+          <div className="grid w-full grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1.1fr)_minmax(18rem,28rem)] xl:items-start xl:gap-12">
+            <div className="flex w-full items-start ">
               <div className="flex w-full max-w-[42rem] flex-col gap-4 sm:gap-5">
                 <ProblemEyebrow label="PROBLEMA - O MUNDO REAL FALHOU" />
 
