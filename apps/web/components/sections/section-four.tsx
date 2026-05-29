@@ -116,7 +116,7 @@ function JourneyCard({ card, index }: { card: JourneyCardData; index: number }) 
       <div
         style={{
           width: "100%",
-          maxWidth: "120px",
+          maxWidth: "110px",
           aspectRatio: "1 / 1",
           borderRadius: "16px",
           border: "1px solid rgba(125,220,255,0.2)",
@@ -237,17 +237,15 @@ export function SectionFour({ className }: { className?: string }) {
             <div
               style={{
                 width: "100%",
-                maxWidth: "1200px",
                 margin: "0 auto",
                 display: "flex",
                 flexDirection: "column",
-                gap: "clamp(36px, 5vw, 56px)",
-              }}
+                gap: "32px",}}
             >
               {/* ── Header ── */}
               <header
                 className="section-four-header"
-                style={{ maxWidth: "680px", display: "flex", flexDirection: "column", gap: "20px" }}
+                style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "flex-start" }}
               >
                 {/* Eyebrow */}
                 <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
@@ -279,7 +277,7 @@ export function SectionFour({ className }: { className?: string }) {
                 {/* Heading */}
                 <h2
                   id="section-four-heading"
-                  className="section-four-heading"
+                  className="text-[length:var(--text-mobile-h1)]"
                   style={{
                     fontWeight: 300,
                     lineHeight: 0.96,
