@@ -51,7 +51,7 @@ export function SectionThree({ className }: SectionThreeProps) {
         .join(" ")}
     >
       <div className="page-shell section-shell h-full">
-        <div className="page-shell--wide mx-auto flex h-full w-full flex-col justify-center gap-4 py-1 lg:gap-5">
+        <div className="page-shell--wide mx-auto flex h-full w-full flex-col justify-between gap-4 py-0 lg:gap-5 xl:gap-6">
           <div className="grid w-full grid-cols-1 items-start gap-5 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] xl:gap-6">
             <div className="w-full max-w-[48rem]">
               <div className="flex w-full max-w-[40rem] flex-col gap-2.5 sm:gap-3.5">
@@ -94,8 +94,8 @@ export function SectionThree({ className }: SectionThreeProps) {
             <div className="hidden xl:block" aria-hidden="true" />
           </div>
 
-          <div className="flex flex-col gap-2.5 lg:gap-3.5">
-            <div className="flex justify-center px-2">
+          <div className="flex flex-col gap-4 lg:gap-5">
+            <div className="flex justify-center px-2 mb-2 lg:mb-3">
               <p className="text-center font-heading text-[length:var(--text-body-sm)] font-light tracking-[0.22em] text-text-secondary sm:text-[length:var(--text-body)] sm:tracking-[0.3em] lg:text-[length:var(--text-body-lg)] lg:tracking-[0.38em]">
                 VOCE NAO APENAS APRENDE. VOCE SE TRANSFORMA.
               </p>
