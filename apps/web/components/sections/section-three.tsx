@@ -44,17 +44,17 @@ export function SectionThree({ className }: SectionThreeProps) {
     <section
       aria-label="Sessao 3 - Estrutural"
       className={[
-        "relative min-h-[100svh] bg-background text-foreground",
+        "relative h-[100svh] max-h-[100svh] overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="page-shell section-shell">
-        <div className="page-shell--wide mx-auto flex w-full flex-col gap-8 lg:gap-10">
-          <div className="grid w-full grid-cols-1 items-start gap-8 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] xl:gap-10">
+      <div className="page-shell section-shell h-full">
+        <div className="page-shell--wide mx-auto flex h-full w-full flex-col justify-center gap-4 py-1 lg:gap-5">
+          <div className="grid w-full grid-cols-1 items-start gap-5 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] xl:gap-6">
             <div className="w-full max-w-[48rem]">
-              <div className="flex w-full max-w-[40rem] flex-col gap-6 sm:gap-7">
+              <div className="flex w-full max-w-[40rem] flex-col gap-2.5 sm:gap-3.5">
                 <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                   <span
                     className="h-[18px] w-[18px] rounded-full border border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
@@ -69,7 +69,7 @@ export function SectionThree({ className }: SectionThreeProps) {
                   />
                 </div>
 
-                <h2 className="font-alt-heading text-[length:var(--text-mobile-h1)] leading-[0.98] font-light tracking-[-0.04em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
+                <h2 className="font-alt-heading text-[length:var(--text-mobile-h1)] leading-[0.95] font-light tracking-[-0.04em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-h2)]">
                   <span className="block">O conhecimento</span>
                   <span className="block bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent">
                     ganha forma.
@@ -77,9 +77,9 @@ export function SectionThree({ className }: SectionThreeProps) {
                   <span className="block">E um novo mundo nasce.</span>
                 </h2>
 
-                <div className="space-y-4">
+                <div className="space-y-2.5">
                   <span className="hidden h-px w-full max-w-72 bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent sm:block" />
-                  <p className="max-w-[34rem] text-[length:var(--text-body)] leading-[1.55] text-text-secondary sm:text-[length:var(--text-body-lg)]">
+                  <p className="max-w-[34rem] text-[length:var(--text-body)] leading-[1.45] text-text-secondary sm:text-[length:var(--text-body)] lg:text-[length:var(--text-body-lg)]">
                     <span className="text-[#35d6ff]">Mnemos Mundi</span> e um
                     universo educacional onde o conhecimento tem peso, forma e
                     valor -{" "}
@@ -94,15 +94,15 @@ export function SectionThree({ className }: SectionThreeProps) {
             <div className="hidden xl:block" aria-hidden="true" />
           </div>
 
-          <div className="flex flex-col gap-5 lg:gap-6">
+          <div className="flex flex-col gap-2.5 lg:gap-3.5">
             <div className="flex justify-center px-2">
               <p className="text-center font-heading text-[length:var(--text-body-sm)] font-light tracking-[0.22em] text-text-secondary sm:text-[length:var(--text-body)] sm:tracking-[0.3em] lg:text-[length:var(--text-body-lg)] lg:tracking-[0.38em]">
                 VOCE NAO APENAS APRENDE. VOCE SE TRANSFORMA.
               </p>
             </div>
 
-            <div className="rounded-[28px] border border-[#6fcbff33] bg-gradient-to-b from-[#0b1730c9] to-[#091428b8] p-4 shadow-[0_14px_42px_rgba(10,22,51,0.4)] sm:p-5 lg:rounded-[34px] lg:p-6">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="rounded-[28px] border border-[#6fcbff33] bg-gradient-to-b from-[#0b1730c9] to-[#091428b8] p-2 shadow-[0_14px_42px_rgba(10,22,51,0.4)] sm:p-2.5 lg:rounded-[34px] lg:p-3">
+              <div className="grid grid-cols-2 gap-2.5 xl:grid-cols-4 xl:gap-3">
                 {featureCards.map((card, index) => (
                   <FeatureCard
                     key={card.indexLabel}
@@ -118,10 +118,10 @@ export function SectionThree({ className }: SectionThreeProps) {
             </div>
           </div>
 
-          <div className="rounded-[24px] border border-[#2b5ea1]/40 bg-gradient-to-r from-[#040c1b]/95 via-[#051228]/92 to-[#030a18]/95 p-4 shadow-[0_10px_34px_rgba(8,20,43,0.48)] sm:p-5 lg:px-8 lg:py-6">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <div className="inline-flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full border border-[#2b5ea1]/60 bg-[#071126] shadow-[0_0_18px_rgba(43,94,161,0.3)] lg:h-[60px] lg:w-[60px]">
-                <span className="h-[22px] w-[22px] rounded-full border border-[#5bc0eb]/70 shadow-[0_0_10px_rgba(91,192,235,0.4)] lg:h-[30px] lg:w-[30px]" />
+          <div className="rounded-[24px] border border-[#2b5ea1]/40 bg-gradient-to-r from-[#040c1b]/95 via-[#051228]/92 to-[#030a18]/95 p-2 shadow-[0_10px_34px_rgba(8,20,43,0.48)] sm:p-2.5 lg:px-4 lg:py-3.5">
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center">
+              <div className="inline-flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full border border-[#2b5ea1]/60 bg-[#071126] shadow-[0_0_18px_rgba(43,94,161,0.3)] lg:h-[46px] lg:w-[46px]">
+                <span className="h-[16px] w-[16px] rounded-full border border-[#5bc0eb]/70 shadow-[0_0_10px_rgba(91,192,235,0.4)] lg:h-[22px] lg:w-[22px]" />
               </div>
 
               <p className="w-full text-center text-[length:var(--text-body-sm)] font-light leading-[1.4] text-text-secondary sm:text-left sm:text-[length:var(--text-body)] lg:text-[length:var(--text-h4)]">
