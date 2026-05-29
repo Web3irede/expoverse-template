@@ -85,7 +85,7 @@ export function SectionSeven({ className }: SectionSevenProps) {
             </p>
           </div>
 
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:w-[72%] lg:grid-cols-4 lg:gap-0">
+          <div className="grid w-full grid-cols-2 gap-4 lg:w-[72%] lg:grid-cols-4 lg:gap-0">
             {impactMetrics.map((metric, index) => (
               <div
                 key={metric.value}
@@ -134,7 +134,7 @@ export function SectionSeven({ className }: SectionSevenProps) {
           </div>
 
           <div className="flex w-full items-center justify-center">
-            <div className="grid w-full max-w-[90%] grid-cols-1 gap-3 rounded-[28px] bg-[#101624]/80 px-5 py-5 sm:grid-cols-2 sm:px-6 lg:grid-cols-5 lg:gap-0 lg:rounded-full lg:px-10">
+            <div className="grid w-full max-w-[90%] grid-cols-2 gap-3 rounded-[28px] bg-[#101624]/80 px-5 py-5 sm:px-6 lg:grid-cols-5 lg:gap-0 lg:rounded-full lg:px-10">
               {impactPillars.map((pillar, index) => (
                 <div
                   key={pillar.label}
