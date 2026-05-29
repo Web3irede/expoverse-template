@@ -179,6 +179,10 @@ function JourneyCard({ card, index }: { card: JourneyCardData; index: number }) 
 }
 
 export function SectionFour({ className }: { className?: string }) {
+  const sectionClassName = ["relative min-h-[100svh] overflow-hidden bg-background text-foreground", className]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <>
       <style>{`
@@ -211,15 +215,7 @@ export function SectionFour({ className }: { className?: string }) {
 
       <section
         aria-labelledby="section-four-heading"
-        className={className}
-        style={{
-          position: "relative",
-          minHeight: "100svh",
-          background: "#050c1f",
-          color: "#e8f0ff",
-          padding: "clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px)",
-          overflow: "hidden",
-        }}
+        className={sectionClassName}
       >
         {/* Ambient background glow */}
         <div
@@ -236,140 +232,144 @@ export function SectionFour({ className }: { className?: string }) {
           }}
         />
 
-        <div
-          style={{
-            position: "relative",
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: "clamp(36px, 5vw, 56px)",
-          }}
-        >
-          {/* ── Header ── */}
-          <header
-            className="section-four-header"
-            style={{ maxWidth: "680px", display: "flex", flexDirection: "column", gap: "20px" }}
-          >
-            {/* Eyebrow */}
-            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-              <span
-                aria-hidden="true"
-                style={{
-                  width: "14px",
-                  height: "14px",
-                  borderRadius: "50%",
-                  border: "1px solid #33d1ff",
-                  boxShadow: "0 0 10px rgba(51,209,255,0.45)",
-                  flexShrink: 0,
-                }}
-              />
-              <p
-                style={{
-                  fontSize: "11px",
-                  fontWeight: 600,
-                  letterSpacing: "0.28em",
-                  color: "#5bc0eb",
-                  margin: 0,
-                  textTransform: "uppercase",
-                }}
-              >
-                Experiencia
-              </p>
-            </div>
-
-            {/* Heading */}
-            <h2
-              id="section-four-heading"
-              className="section-four-heading"
+        <div className="page-shell relative z-10 flex min-h-[100svh] flex-col px-4 py-6 sm:px-6 sm:py-8 md:px-10 lg:px-16 lg:py-12">
+          <div className="flex flex-1 flex-col justify-center">
+            <div
               style={{
-                fontWeight: 300,
-                lineHeight: 0.96,
-                letterSpacing: "-0.04em",
-                margin: 0,
-                color: "#e8f0ff",
+                width: "100%",
+                maxWidth: "1200px",
+                margin: "0 auto",
+                display: "flex",
+                flexDirection: "column",
+                gap: "clamp(36px, 5vw, 56px)",
               }}
             >
-              <span style={{ display: "block" }}>Aprender aqui e</span>
-              <span style={{ display: "block" }}>
-                <span
+              {/* ── Header ── */}
+              <header
+                className="section-four-header"
+                style={{ maxWidth: "680px", display: "flex", flexDirection: "column", gap: "20px" }}
+              >
+                {/* Eyebrow */}
+                <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      width: "14px",
+                      height: "14px",
+                      borderRadius: "50%",
+                      border: "1px solid #33d1ff",
+                      boxShadow: "0 0 10px rgba(51,209,255,0.45)",
+                      flexShrink: 0,
+                    }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "11px",
+                      fontWeight: 600,
+                      letterSpacing: "0.28em",
+                      color: "#5bc0eb",
+                      margin: 0,
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Experiencia
+                  </p>
+                </div>
+
+                {/* Heading */}
+                <h2
+                  id="section-four-heading"
+                  className="section-four-heading"
                   style={{
-                    background: "linear-gradient(90deg, #5bc0eb, #9d7dff)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
+                    fontWeight: 300,
+                    lineHeight: 0.96,
+                    letterSpacing: "-0.04em",
+                    margin: 0,
+                    color: "#e8f0ff",
                   }}
                 >
-                  viver
-                </span>
-                <span> o conhecimento.</span>
-              </span>
-            </h2>
+                  <span style={{ display: "block" }}>Aprender aqui e</span>
+                  <span style={{ display: "block" }}>
+                    <span
+                      style={{
+                        background: "linear-gradient(90deg, #5bc0eb, #9d7dff)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                      }}
+                    >
+                      viver
+                    </span>
+                    <span> o conhecimento.</span>
+                  </span>
+                </h2>
 
-            {/* Separator */}
-            <div
-              aria-hidden="true"
-              style={{
-                height: "1px",
-                width: "min(320px, 100%)",
-                background: "linear-gradient(to right, #2ad0ff, transparent)",
-              }}
-            />
-
-            {/* Body copy */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-              <p
-                style={{
-                  fontSize: "clamp(15px, 1.8vw, 18px)",
-                  lineHeight: 1.6,
-                  color: "rgba(190,215,255,0.7)",
-                  margin: 0,
-                  maxWidth: "480px",
-                }}
-              >
-                Lucas entra no Mnemos Mundi. Escolhe Astronomia. Responde,
-                conquista e deixa seu legado registrado na blockchain.
-              </p>
-              <p
-                style={{
-                  fontSize: "clamp(15px, 1.8vw, 18px)",
-                  lineHeight: 1.6,
-                  fontWeight: 600,
-                  color: "#5bc0eb",
-                  margin: 0,
-                  textShadow: "0 0 8px rgba(91,192,235,0.4)",
-                }}
-              >
-                Para sempre.
-              </p>
-            </div>
-          </header>
-
-          {/* ── Connector line (lg+) ── */}
-          <div aria-hidden="true" style={{ position: "relative" }}>
-            <div
-              style={{
-                position: "absolute",
-                top: "44px",
-                left: "8%",
-                right: "8%",
-                height: "1px",
-                background: "linear-gradient(to right, transparent, rgba(42,208,255,0.25), transparent)",
-                pointerEvents: "none",
-              }}
-            />
-
-            {/* ── Cards grid ── */}
-            <div className="section-four-grid">
-              {journeyCards.map((card, i) => (
+                {/* Separator */}
                 <div
-                  key={card.step}
-                  className="section-four-card"
-                  style={{ animationDelay: `${i * 80}ms` }}
-                >
-                  <JourneyCard card={card} index={i} />
+                  aria-hidden="true"
+                  style={{
+                    height: "1px",
+                    width: "min(320px, 100%)",
+                    background: "linear-gradient(to right, #2ad0ff, transparent)",
+                  }}
+                />
+
+                {/* Body copy */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                  <p
+                    style={{
+                      fontSize: "clamp(15px, 1.8vw, 18px)",
+                      lineHeight: 1.6,
+                      color: "rgba(190,215,255,0.7)",
+                      margin: 0,
+                      maxWidth: "480px",
+                    }}
+                  >
+                    Lucas entra no Mnemos Mundi. Escolhe Astronomia. Responde,
+                    conquista e deixa seu legado registrado na blockchain.
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "clamp(15px, 1.8vw, 18px)",
+                      lineHeight: 1.6,
+                      fontWeight: 600,
+                      color: "#5bc0eb",
+                      margin: 0,
+                      textShadow: "0 0 8px rgba(91,192,235,0.4)",
+                    }}
+                  >
+                    Para sempre.
+                  </p>
                 </div>
-              ))}
+              </header>
+
+              {/* ── Connector line (lg+) ── */}
+              <div aria-hidden="true" style={{ position: "relative" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "44px",
+                    left: "8%",
+                    right: "8%",
+                    height: "1px",
+                    background: "linear-gradient(to right, transparent, rgba(42,208,255,0.25), transparent)",
+                    pointerEvents: "none",
+                  }}
+                />
+
+                {/* ── Cards grid ── */}
+                <div className="section-four-grid">
+                  {journeyCards.map((card, i) => (
+                    <div
+                      key={card.step}
+                      className="section-four-card"
+                      style={{ animationDelay: `${i * 80}ms` }}
+                    >
+                      <JourneyCard card={card} index={i} />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
