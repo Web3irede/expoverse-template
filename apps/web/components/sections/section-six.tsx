@@ -60,52 +60,20 @@ type RightCardData = (typeof rightCards)[number];
 
 const DimCircleIcon = () => (
   <div
-    style={{
-      width: 52,
-      height: 52,
-      borderRadius: "50%",
-      border: "1.5px solid #2a3a5a",
-      background: "#0a1026",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      flexShrink: 0,
-    }}
+    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#2a3a5a] bg-[#0a1026] sm:h-[52px] sm:w-[52px]"
   >
-    <div
-      style={{
-        width: 22,
-        height: 22,
-        borderRadius: "50%",
-        border: "1.5px solid #3a4a6a",
-      }}
-    />
+    <div className="h-5 w-5 rounded-full border border-[#3a4a6a] sm:h-[22px] sm:w-[22px]" />
   </div>
 );
 
 const GlowCircleIcon = ({ color, glow }: { color: string; glow: string }) => (
   <div
-    style={{
-      width: 52,
-      height: 52,
-      borderRadius: "50%",
-      border: `1.5px solid ${color}`,
-      background: "#0a1833",
-      boxShadow: `0 0 22px ${glow}`,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      flexShrink: 0,
-    }}
+    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border bg-[#0a1833] sm:h-[52px] sm:w-[52px]"
+    style={{ borderColor: color, boxShadow: `0 0 22px ${glow}` }}
   >
     <div
-      style={{
-        width: 22,
-        height: 22,
-        borderRadius: "50%",
-        border: `1.5px solid ${color}`,
-        boxShadow: `0 0 10px ${glow}`,
-      }}
+      className="h-5 w-5 rounded-full border sm:h-[22px] sm:w-[22px]"
+      style={{ borderColor: color, boxShadow: `0 0 10px ${glow}` }}
     />
   </div>
 );
@@ -117,30 +85,16 @@ const LeftCard = ({ card }: { card: LeftCardData }) => {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      className="relative flex min-w-0 flex-1 items-start gap-4 overflow-hidden rounded-[18px] px-4 py-5 transition-all duration-200 sm:items-center sm:gap-5 sm:px-5 md:px-6 lg:min-h-[124px]"
       style={{
-        flex: 1,
-        borderRadius: 18,
         border: `1px solid ${hovered ? "#2a3f6f" : "#172554"}`,
         background: hovered ? "#06102a" : "#040b1d",
-        display: "flex",
-        alignItems: "center",
-        gap: 20,
-        padding: "0 28px",
-        transition: "all 0.25s ease",
         cursor: "default",
-        position: "relative",
-        overflow: "hidden",
       }}
     >
-      {/* subtle left accent line */}
       <div
+        className="absolute bottom-[18%] left-0 top-[18%] w-[3px] rounded"
         style={{
-          position: "absolute",
-          left: 0,
-          top: "20%",
-          bottom: "20%",
-          width: 3,
-          borderRadius: 4,
           background:
             "linear-gradient(to bottom, transparent, #2a3f6f, transparent)",
           opacity: hovered ? 0.8 : 0.3,
@@ -150,24 +104,20 @@ const LeftCard = ({ card }: { card: LeftCardData }) => {
 
       <DimCircleIcon />
 
-      <div>
+      <div className="min-w-0 flex-1">
         <h3
+          className="mb-1.5 font-semibold leading-[1.2] text-[length:var(--text-body)]"
           style={{
-            fontSize: "var(--text-body)",
-            fontWeight: 600,
             color: "var(--text-secondary)",
-            lineHeight: 1.2,
-            marginBottom: 6,
             fontFamily: "'Space Grotesk', sans-serif",
           }}
         >
           {card.title}
         </h3>
         <p
+          className="text-[length:var(--text-caption)] leading-[1.5]"
           style={{
-            fontSize: "var(--text-caption)",
             color: "var(--text-muted)",
-            lineHeight: 1.5,
             fontFamily: "'Space Grotesk', sans-serif",
           }}
         >
@@ -185,68 +135,49 @@ const RightCard = ({ card }: { card: RightCardData }) => {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      className="relative flex min-w-0 flex-1 items-start gap-4 overflow-hidden rounded-[18px] px-4 py-5 transition-all duration-200 sm:items-center sm:gap-5 sm:px-5 md:px-6 lg:min-h-[124px]"
       style={{
-        flex: 1,
-        borderRadius: 18,
-        border: `1px solid ${hovered ? card.accentColor + "60" : "#17325f"}`,
+        border: `1px solid ${hovered ? `${card.accentColor}60` : "#17325f"}`,
         background: "#081126",
-        display: "flex",
-        alignItems: "center",
-        gap: 20,
-        padding: "0 28px",
-        transition: "all 0.25s ease",
         cursor: "default",
-        position: "relative",
-        overflow: "hidden",
       }}
     >
-      {/* Gradient glow background */}
       <div
+        className="pointer-events-none absolute inset-0"
         style={{
-          position: "absolute",
-          inset: 0,
           background: `radial-gradient(ellipse at left center, ${card.glowColor} 0%, transparent 65%)`,
           opacity: hovered ? 0.6 : 0.3,
           transition: "opacity 0.25s ease",
-          pointerEvents: "none",
         }}
       />
 
-      {/* right accent line */}
       <div
+        className="absolute bottom-[18%] right-0 top-[18%] w-[3px] rounded"
         style={{
-          position: "absolute",
-          right: 0,
-          top: "20%",
-          bottom: "20%",
-          width: 3,
-          borderRadius: 4,
           background: `linear-gradient(to bottom, transparent, ${card.accentColor}, transparent)`,
           opacity: hovered ? 0.9 : 0.35,
           transition: "opacity 0.25s ease",
         }}
       />
 
-      <GlowCircleIcon color={card.accentColor} glow={card.glowColor} />
+      <div className="relative z-[1]">
+        <GlowCircleIcon color={card.accentColor} glow={card.glowColor} />
+      </div>
 
-      <div style={{ position: "relative", zIndex: 1 }}>
+      <div className="relative z-[1] min-w-0 flex-1">
         <h3
+          className="mb-1.5 font-semibold leading-[1.2] text-[length:var(--text-body)]"
           style={{
-            fontSize: "var(--text-body)",
-            fontWeight: 600,
             color: "var(--text-primary)",
-            lineHeight: 1.2,
-            marginBottom: 6,
             fontFamily: "'Space Grotesk', sans-serif",
           }}
         >
           {card.title}
         </h3>
         <p
+          className="text-[length:var(--text-caption)] leading-[1.5]"
           style={{
-            fontSize: "var(--text-caption)",
             color: "var(--text-secondary)",
-            lineHeight: 1.5,
             fontFamily: "'Space Grotesk', sans-serif",
           }}
         >
@@ -261,28 +192,20 @@ export default function SectionSix({ className }: { className?: string }) {
   return (
     <section
       aria-label="Sessao 6"
-      style={{
-        position: "relative",
-        height: "100svh",
-        minHeight: 0,
-        overflow: "hidden",
-        background: "var(--background)",
-        color: "var(--text-primary)",
-        display: "flex",
-        flexDirection: "column",
-      }}
-      className={className}
+      className={[
+        "relative min-h-[100svh] overflow-hidden bg-background text-text-primary",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
     >
-      {/* Star field dots */}
       {[...Array(28)].map((_, i) => (
         <div
           key={i}
+          className="absolute rounded-full bg-white"
           style={{
-            position: "absolute",
             width: i % 5 === 0 ? 2 : 1,
             height: i % 5 === 0 ? 2 : 1,
-            borderRadius: "50%",
-            background: "white",
             opacity: 0.08 + (i % 4) * 0.04,
             top: `${(i * 37 + 11) % 100}%`,
             left: `${(i * 53 + 7) % 100}%`,
@@ -290,30 +213,9 @@ export default function SectionSix({ className }: { className?: string }) {
         />
       ))}
 
-      <div
-        style={{
-          margin: "0 auto",
-          display: "flex",
-          height: "100%",
-          width: "100%",
-          maxWidth: 1760,
-          flexDirection: "column",
-          padding: "24px 64px 32px",
-          gap: 24,
-          boxSizing: "border-box",
-        }}
-      >
-        {/* Header */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 12,
-            flexShrink: 0,
-          }}
-        >
-          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+      <div className="mx-auto flex w-full max-w-[1760px] flex-col gap-6 px-4 py-6 sm:px-8 sm:py-8 lg:px-12 xl:px-16">
+        <div className="flex shrink-0 flex-col items-center gap-3 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <span
               className="h-[18px] w-[18px] rounded-full border-[1.5px] border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
               aria-hidden="true"
@@ -330,15 +232,8 @@ export default function SectionSix({ className }: { className?: string }) {
           </div>
 
           <h2
-            style={{
-              fontSize: "var(--text-display)",
-              fontWeight: 300,
-              lineHeight: 0.95,
-              letterSpacing: "-0.05em",
-              textAlign: "center",
-              margin: 0,
-              fontFamily: "'Space Grotesk', sans-serif",
-            }}
+            className="m-0 text-[length:var(--text-mobile-h1)] font-light leading-[0.95] tracking-[-0.05em] sm:text-[length:var(--text-h1)]"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             <span style={{ color: "var(--text-primary)" }}>Dois mundos. </span>
             <span
@@ -354,12 +249,9 @@ export default function SectionSix({ className }: { className?: string }) {
           </h2>
 
           <p
+            className="m-0 max-w-[38rem] text-[length:var(--text-body)] font-light tracking-[-0.02em]"
             style={{
-              fontSize: "var(--text-body)",
-              fontWeight: 300,
               color: "var(--text-muted)",
-              letterSpacing: "-0.02em",
-              margin: 0,
               fontFamily: "'Space Grotesk', sans-serif",
             }}
           >
@@ -367,124 +259,40 @@ export default function SectionSix({ className }: { className?: string }) {
           </p>
         </div>
 
-        {/* Two containers */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 16,
-            flex: 1,
-            minHeight: 0,
-          }}
-        >
-          {/* LEFT CONTAINER — Educação Hoje */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 8,
-              borderRadius: 24,
-              border: "1px solid #172554",
-              background: "rgba(4,11,29,0.7)",
-              padding: "20px 20px 20px 20px",
-              backdropFilter: "blur(12px)",
-            }}
-          >
-            {/* Container title */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 10,
-                paddingBottom: 12,
-                borderBottom: "1px solid #172554",
-                flexShrink: 0,
-              }}
-            >
-              <div
-                style={{
-                  width: 16,
-                  height: 16,
-                  borderRadius: "50%",
-                  border: "1.5px solid #5a6e8e",
-                }}
-              />
+        <div className="grid flex-1 grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5">
+          <div className="flex min-w-0 flex-col gap-3 rounded-[24px] border border-[#172554] bg-[rgba(4,11,29,0.7)] p-4 backdrop-blur-[12px] sm:p-5 lg:gap-2">
+            <div className="flex shrink-0 items-center justify-center gap-3 border-b border-[#172554] pb-3 text-center">
+              <div className="h-4 w-4 rounded-full border-[1.5px] border-[#5a6e8e]" />
               <span
-                style={{
-                  fontSize: "var(--text-body-sm)",
-                  fontWeight: 500,
-                  letterSpacing: "0.28em",
-                  color: "var(--text-muted)",
-                  fontFamily: "'Space Grotesk', sans-serif",
-                }}
+                className="text-[length:var(--text-body-sm)] font-medium tracking-[0.18em] text-text-muted sm:tracking-[0.28em]"
+                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 EDUCAÇÃO HOJE
               </span>
             </div>
 
-            {/* 4 left cards */}
             {leftCards.map((card, i) => (
               <LeftCard key={i} card={card} />
             ))}
           </div>
 
-          {/* RIGHT CONTAINER — Mnemos-Mundi */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 8,
-              borderRadius: 24,
-              border: "1px solid #17325f",
-              background: "rgba(8,17,38,0.7)",
-              padding: "20px 20px 20px 20px",
-              backdropFilter: "blur(12px)",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            {/* Container ambient glow */}
+          <div className="relative flex min-w-0 flex-col gap-3 overflow-hidden rounded-[24px] border border-[#17325f] bg-[rgba(8,17,38,0.7)] p-4 backdrop-blur-[12px] sm:p-5 lg:gap-2">
             <div
+              className="absolute left-[10%] right-[10%] top-0 h-[2px] rounded-full"
               style={{
-                position: "absolute",
-                top: 0,
-                left: "10%",
-                right: "10%",
-                height: 2,
                 background:
                   "linear-gradient(to right, transparent, #33d1ff80, #7b61ff80, transparent)",
-                borderRadius: 999,
               }}
             />
 
-            {/* Container title */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 10,
-                paddingBottom: 12,
-                borderBottom: "1px solid #1a3a5f",
-                flexShrink: 0,
-              }}
-            >
+            <div className="flex shrink-0 items-center justify-center gap-3 border-b border-[#1a3a5f] pb-3 text-center">
               <div
-                style={{
-                  width: 16,
-                  height: 16,
-                  borderRadius: "50%",
-                  border: "1.5px solid #33d1ff",
-                  boxShadow: "0 0 12px rgba(51,209,255,0.5)",
-                }}
+                className="h-4 w-4 rounded-full border-[1.5px] border-[#33d1ff]"
+                style={{ boxShadow: "0 0 12px rgba(51,209,255,0.5)" }}
               />
               <span
+                className="text-[length:var(--text-body-sm)] font-medium tracking-[0.18em] text-cyan-400 sm:tracking-[0.28em]"
                 style={{
-                  fontSize: "var(--text-body-sm)",
-                  fontWeight: 500,
-                  letterSpacing: "0.28em",
-                  color: "var(--color-cyan-400)",
                   fontFamily: "'Space Grotesk', sans-serif",
                   textShadow: "0 0 12px rgba(91,192,235,0.4)",
                 }}
@@ -493,112 +301,70 @@ export default function SectionSix({ className }: { className?: string }) {
               </span>
             </div>
 
-            {/* 4 right cards */}
             {rightCards.map((card, i) => (
               <RightCard key={i} card={card} />
             ))}
           </div>
         </div>
 
-        {/* Bottom Banner */}
-        <div
-          style={{
-            flexShrink: 0,
-            borderRadius: 999,
-            border: "1px solid #1a3050",
-            background: "rgba(6,14,36,0.85)",
-            backdropFilter: "blur(16px)",
-            padding: "14px 28px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 20,
-            boxShadow:
-              "0 0 40px rgba(51,209,255,0.06), inset 0 1px 0 rgba(91,192,235,0.08)",
-          }}
-        >
-          {/* Star icon */}
-          <div
-            style={{
-              width: 38,
-              height: 38,
-              borderRadius: "50%",
-              border: "1.5px solid #33d1ff",
-              background: "rgba(51,209,255,0.06)",
-              boxShadow: "0 0 16px rgba(51,209,255,0.35)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-            }}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"
-                stroke="#5bc0eb"
-                strokeWidth="1.5"
-                strokeLinejoin="round"
-                fill="rgba(91,192,235,0.15)"
-              />
-            </svg>
-          </div>
+        <div className="flex shrink-0 justify-center">
+          <div className="flex w-full flex-col items-center justify-center gap-4 rounded-[28px] border border-[#1a3050] bg-[rgba(6,14,36,0.85)] px-4 py-4 text-center backdrop-blur-[16px] sm:px-6 sm:py-5 lg:flex-row lg:gap-5 lg:rounded-full lg:text-left">
+            <div
+              className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-[#33d1ff] bg-[rgba(51,209,255,0.06)]"
+              style={{ boxShadow: "0 0 16px rgba(51,209,255,0.35)" }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"
+                  stroke="#5bc0eb"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
+                  fill="rgba(91,192,235,0.15)"
+                />
+              </svg>
+            </div>
 
-          {/* Text left */}
-          <span
-            style={{
-              fontSize: "var(--text-body-sm)",
-              fontWeight: 400,
-              color: "var(--text-secondary)",
-              fontFamily: "'Space Grotesk', sans-serif",
-              letterSpacing: "-0.01em",
-              whiteSpace: "nowrap",
-            }}
-          >
-            O futuro da educação não é assistir conteúdo.
-          </span>
-
-          {/* Divider */}
-
-          <div
-            style={{
-              width: 1,
-              height: 22,
-              background:
-                "linear-gradient(to bottom, transparent, #2a4a6a, transparent)",
-              flexShrink: 0,
-            }}
-          />
-
-          {/* Text right */}
-          <span
-            style={{
-              fontSize: "var(--text-body-sm)",
-              fontWeight: 400,
-              color: "var(--text-secondary)",
-              fontFamily: "'Space Grotesk', sans-serif",
-              letterSpacing: "-0.01em",
-              whiteSpace: "nowrap",
-            }}
-          >
-            É construir uma{" "}
             <span
+              className="text-[length:var(--text-body-sm)]"
               style={{
-                color: "#5bc0eb",
-                textShadow: "0 0 12px rgba(91,192,235,0.5)",
+                color: "var(--text-secondary)",
+                fontFamily: "'Space Grotesk', sans-serif",
+                letterSpacing: "-0.01em",
               }}
             >
-              identidade
-            </span>{" "}
-            através do{" "}
-            <span
-              style={{
-                color: "#5bc0eb",
-                textShadow: "0 0 12px rgba(91,192,235,0.5)",
-              }}
-            >
-              conhecimento.
+              O futuro da educação não é assistir conteúdo.
             </span>
-          </span>
+
+            <div className="hidden h-[22px] w-px shrink-0 bg-gradient-to-b from-transparent via-[#2a4a6a] to-transparent lg:block" />
+
+            <span
+              className="text-[length:var(--text-body-sm)]"
+              style={{
+                color: "var(--text-secondary)",
+                fontFamily: "'Space Grotesk', sans-serif",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              É construir uma{" "}
+              <span
+                style={{
+                  color: "#5bc0eb",
+                  textShadow: "0 0 12px rgba(91,192,235,0.5)",
+                }}
+              >
+                identidade
+              </span>{" "}
+              através do{" "}
+              <span
+                style={{
+                  color: "#5bc0eb",
+                  textShadow: "0 0 12px rgba(91,192,235,0.5)",
+                }}
+              >
+                conhecimento.
+              </span>
+            </span>
+          </div>
         </div>
       </div>
     </section>
