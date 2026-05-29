@@ -38,32 +38,32 @@ export function SectionSeven({ className }: SectionSevenProps) {
     <section
       aria-label="Sessao 7"
       className={[
-        "relative h-[100svh] min-h-0 overflow-hidden bg-background text-foreground",
+        "relative min-h-[100svh] overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="mx-auto flex h-full w-full max-w-[1920px] flex-col px-4 pt-4 pb-1 sm:px-10 md:px-16 lg:px-8 lg:pt-6 lg:pb-1">
-        <div className="mx-auto flex h-full w-full max-w-[1760px] min-h-0 flex-col items-center gap-3 lg:gap-4">
-          <div className="flex h-[4%] w-[390px] shrink-0 items-center justify-center ">
+      <div className="page-shell section-shell mx-auto flex w-full flex-col">
+        <div className="page-shell--wide mx-auto flex w-full max-w-[1760px] flex-col items-center gap-6 sm:gap-8 lg:gap-10">
+          <div className="flex w-full max-w-[390px] items-center justify-center sm:self-start">
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-                  <span
-                    className="h-[18px] w-[18px] rounded-full border border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
-                    aria-hidden="true"
-                  />
-                  <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.22em] text-[#5bc0eb] sm:tracking-[0.32em]">
-                    IMPACTO
-                  </p>
-                  <span
-                    className="hidden h-px max-w-40 flex-1 bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent sm:block"
-                    aria-hidden="true"
-                  />
-                </div>
+              <span
+                className="h-[18px] w-[18px] rounded-full border border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
+                aria-hidden="true"
+              />
+              <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.22em] text-[#5bc0eb] sm:tracking-[0.32em]">
+                IMPACTO
+              </p>
+              <span
+                className="hidden h-px max-w-40 flex-1 bg-gradient-to-r from-[#2ad0ff] via-[#2ad0ff] to-transparent sm:block"
+                aria-hidden="true"
+              />
+            </div>
           </div>
 
-          <div className="flex h-[8%] w-full shrink-0 items-center justify-center ">
-            <h2 className="font-alt-heading text-[length:var(--text-mobile-h1)] font-light leading-none tracking-[-0.04em] text-text-primary lg:text-[length:var(--text-h1)]">
+          <div className="flex w-full items-center justify-center">
+            <h2 className="max-w-[14ch] text-center font-alt-heading text-[length:var(--text-mobile-h1)] font-light leading-[0.94] tracking-[-0.04em] text-text-primary sm:max-w-[18ch] lg:max-w-[22ch] lg:text-[length:var(--text-h1)]">
               O futuro da{" "}
               <span className="bg-gradient-to-r from-[#9d7dff] to-[#35d6ff] bg-clip-text text-transparent">
                 educação
@@ -75,8 +75,8 @@ export function SectionSeven({ className }: SectionSevenProps) {
             </h2>
           </div>
 
-          <div className="flex h-[4%] w-[810px] shrink-0 items-center justify-center ">
-            <p className="text-[length:var(--text-body-lg)] font-light leading-[1.25] text-text-secondary lg:text-[length:var(--text-h4)]">
+          <div className="flex w-full max-w-[810px] items-center justify-center px-2">
+            <p className="text-center text-[length:var(--text-body)] font-light leading-[1.5] text-text-secondary sm:text-[length:var(--text-body-lg)] lg:text-[length:var(--text-h4)]">
               Estamos construindo um{" "}
               <span className="text-[#35d6ff]">
                 futuro digital de verdade
@@ -85,14 +85,14 @@ export function SectionSeven({ className }: SectionSevenProps) {
             </p>
           </div>
 
-          <div className="grid h-[15%] w-[72%] shrink-0 grid-cols-4 ">
+          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:w-[72%] lg:grid-cols-4 lg:gap-0">
             {impactMetrics.map((metric, index) => (
               <div
                 key={metric.value}
                 className={[
-                  "flex h-full items-center gap-4 px-6",
+                  "flex min-h-[132px] items-center gap-4 rounded-[22px] border border-[#2ad0ff]/12 bg-[#101624]/45 px-5 py-5 sm:px-6 lg:min-h-[164px] lg:rounded-none lg:border-y-0 lg:border-l-0 lg:bg-transparent lg:py-0",
                   index < impactMetrics.length - 1
-                    ? "border-r border-[#2ad0ff]/15"
+                    ? "lg:border-r lg:border-[#2ad0ff]/15"
                     : "",
                 ]
                   .filter(Boolean)
@@ -104,12 +104,12 @@ export function SectionSeven({ className }: SectionSevenProps) {
                   aria-hidden="true"
                 />
 
-                <div className="flex flex-col gap-1">
-                  <strong className="font-alt-heading text-[length:var(--text-h2)] font-light leading-none text-text-primary">
+                <div className="flex flex-col gap-1.5">
+                  <strong className="font-alt-heading text-[length:var(--text-mobile-h2)] font-light leading-none text-text-primary sm:text-[length:var(--text-h2)]">
                     {metric.value}
                   </strong>
 
-                  <p className="whitespace-pre-line text-[length:var(--text-body)] font-light leading-[1.3] text-text-secondary lg:text-[length:var(--text-body-lg)]">
+                  <p className="whitespace-pre-line text-[length:var(--text-body)] font-light leading-[1.35] text-text-secondary lg:text-[length:var(--text-body-lg)]">
                     {metric.description}
                   </p>
                 </div>
@@ -117,31 +117,31 @@ export function SectionSeven({ className }: SectionSevenProps) {
             ))}
           </div>
 
-          <div className="h-[28%] w-full shrink-0 " />
-
-          <div className="flex h-[11%] w-[90%] shrink-0 items-center justify-center rounded-[24px]  bg-[#101624]/80 px-10">
-            <p className="font-alt-heading text-[length:var(--text-h2)] font-light leading-none tracking-[0.02em] text-text-secondary">
-              Deixar um{" "}
-              <span className="text-[#9d7dff] drop-shadow-[0_0_12px_rgba(157,125,255,0.65)]">
-                legado
-              </span>{" "}
-              — o conhecimento{" "}
-              <span className="text-[#35d6ff] drop-shadow-[0_0_12px_rgba(53,214,255,0.65)]">
-                pertence ao aluno
-              </span>
-              .
-            </p>
+          <div className="mt-2 flex w-full items-center justify-center lg:mt-4">
+            <div className="w-full max-w-[90%] rounded-[24px] bg-[#101624]/80 px-5 py-6 sm:px-8 lg:px-10">
+              <p className="text-center font-alt-heading text-[length:var(--text-mobile-h2)] font-light leading-[1.05] tracking-[0.02em] text-text-secondary sm:text-[length:var(--text-h3)] lg:text-[length:var(--text-h2)]">
+                Deixar um{" "}
+                <span className="text-[#9d7dff] drop-shadow-[0_0_12px_rgba(157,125,255,0.65)]">
+                  legado
+                </span>{" "}
+                — o conhecimento{" "}
+                <span className="text-[#35d6ff] drop-shadow-[0_0_12px_rgba(53,214,255,0.65)]">
+                  pertence ao aluno
+                </span>
+                .
+              </p>
+            </div>
           </div>
 
-          <div className="flex h-[9%] w-[90%] shrink-0 items-center justify-center rounded-full  bg-[#101624]/80 px-10">
-            <div className="grid w-full grid-cols-5 items-center">
+          <div className="flex w-full items-center justify-center">
+            <div className="grid w-full max-w-[90%] grid-cols-1 gap-3 rounded-[28px] bg-[#101624]/80 px-5 py-5 sm:grid-cols-2 sm:px-6 lg:grid-cols-5 lg:gap-0 lg:rounded-full lg:px-10">
               {impactPillars.map((pillar, index) => (
                 <div
                   key={pillar.label}
                   className={[
-                    "flex items-center justify-center gap-3",
+                    "flex min-h-[52px] items-center justify-center gap-3 rounded-full border border-[#d9e2ec]/10 px-4 py-3 lg:min-h-0 lg:rounded-none lg:border-y-0 lg:border-l-0 lg:px-0 lg:py-0",
                     index < impactPillars.length - 1
-                      ? "border-r border-[#d9e2ec]/10"
+                      ? "lg:border-r lg:border-[#d9e2ec]/10"
                       : "",
                   ]
                     .filter(Boolean)
@@ -153,7 +153,7 @@ export function SectionSeven({ className }: SectionSevenProps) {
                     aria-hidden="true"
                   />
 
-                  <p className="text-[length:var(--text-body)] font-light leading-none text-text-secondary lg:text-[length:var(--text-body-lg)]">
+                  <p className="text-center text-[length:var(--text-body)] font-light leading-[1.2] text-text-secondary lg:text-[length:var(--text-body-lg)]">
                     {pillar.label}
                   </p>
                 </div>
