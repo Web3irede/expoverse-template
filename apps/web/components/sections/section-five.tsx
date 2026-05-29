@@ -114,7 +114,7 @@ export function SectionFive({ className }: SectionFiveProps) {
               </div>
 
               {/* Center column */}
-              <div className="flex min-h-[10rem] flex-col items-center justify-center gap-4 rounded-[24px] border border-white/8 bg-white/[0.02] px-5 py-6">
+              <div className="hidden md:flex min-h-[10rem] flex-col items-center justify-center gap-4 rounded-[24px] border border-white/8 bg-white/[0.02] px-5 py-6">
                 <div className="flex items-center justify-center px-2 py-2">
                   <div className="space-y-1 text-center text-[length:var(--text-body-sm)] font-medium tracking-[0.28em] text-text-secondary lg:tracking-[0.28em]">
                     <p>
