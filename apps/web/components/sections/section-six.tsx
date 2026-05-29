@@ -313,37 +313,20 @@ export default function SectionSix({ className }: { className?: string }) {
             flexShrink: 0,
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 10,
-              padding: "4px 16px",
-              border: "1px solid #1a3a5a",
-              borderRadius: 999,
-              background: "rgba(91,192,235,0.06)",
-            }}
-          >
-            <div
-              style={{
-                width: 6,
-                height: 6,
-                borderRadius: "50%",
-                border: "1px solid #5bc0eb",
-                boxShadow: "0 0 8px rgba(91,192,235,0.6)",
-              }}
-            />
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <span
-              style={{
-                fontSize: "var(--text-caption)",
-                fontWeight: 500,
-                letterSpacing: "0.45em",
-                color: "var(--color-cyan-400)",
-                fontFamily: "'Space Grotesk', sans-serif",
-              }}
-            >
+              className="h-[18px] w-[18px] rounded-full border-[1.5px] border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"
+              aria-hidden="true"
+            />
+
+            <p className="text-[length:var(--text-eyebrow)] font-medium tracking-[0.22em] text-[#5bc0eb] sm:tracking-[0.32em]">
               O QUE TORNA ÚNICO
-            </span>
+            </p>
+
+            <span
+              className="hidden h-px max-w-32 flex-1 bg-gradient-to-r from-[#2ad0ff] to-transparent shadow-[0_0_6px_rgba(42,208,255,0.4)] sm:block"
+              aria-hidden="true"
+            />
           </div>
 
           <h2
