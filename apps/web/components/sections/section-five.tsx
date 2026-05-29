@@ -9,14 +9,9 @@ function SmartContractsCard() {
   relative flex flex-col items-start gap-3 overflow-hidden
   rounded-[28px]
   border border-[#7ecbff80]
-  bg-[linear-gradient(145deg,rgba(12,28,58,0.72)_0%,rgba(8,18,42,0.66)_55%,rgba(16,39,78,0.58)_100%)]
   px-4 py-5
-  shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_0_0_1px_rgba(126,203,255,0.16),0_0_28px_rgba(91,192,235,0.22)]
   backdrop-blur-[24px]
   before:pointer-events-none before:absolute before:inset-0 before:rounded-[28px]
-  before:bg-[linear-gradient(135deg,rgba(180,235,255,0.42)_0%,rgba(91,192,235,0.16)_28%,transparent_52%,rgba(91,192,235,0.22)_100%)]
-  before:[mask:linear-gradient(#000_0_0)_content-box,linear-gradient(#000_0_0)]
-  before:p-px before:[mask-composite:exclude]
   lg:flex-row lg:items-center lg:gap-5 lg:px-5
 "
     >
@@ -77,11 +72,11 @@ export function SectionFive({ className }: SectionFiveProps) {
               </div>
 
               <div className="space-y-1 font-heading text-text-primary">
-                <h2 className="text-[length:var(--text-mobile-h2)] font-light leading-[0.94] tracking-[-0.04em] sm:text-[length:var(--text-h2)] lg:text-[length:var(--text-h1)]">
+                <h2 className="text-[length:var(--text-mobile-h2)] font-light leading-[0.94] tracking-[-0.04em] sm:text-[length:var(--text-h2)] lg:text-[length:var(--text-h2)]">
                   Tecnologia que transforma
                 </h2>
 
-                <h3 className="text-[length:var(--text-mobile-h2)] font-light leading-[0.94] tracking-[-0.04em] sm:text-[length:var(--text-h2)] lg:text-[length:var(--text-h1)]">
+                <h3 className="text-[length:var(--text-mobile-h2)] font-light leading-[0.94] tracking-[-0.04em] sm:text-[length:var(--text-h2)] lg:text-[length:var(--text-h2)]">
                   <span>aprendizado em </span>
                   <span className="bg-gradient-to-r from-[#ffb84d] to-[#ffd978] bg-clip-text text-transparent">
                     legado.
@@ -91,11 +86,11 @@ export function SectionFive({ className }: SectionFiveProps) {
 
               <div className="flex items-start gap-4 sm:gap-5">
                 <span
-                  className="mt-1 h-16 w-[2px] shrink-0 bg-gradient-to-b from-[#31c8ff00] via-[#31c8ff] to-[#31c8ff00] shadow-[0_0_10px_rgba(49,200,255,0.4)] sm:h-[78px]"
+                  className=" h-16 w-[2px] shrink-0 bg-gradient-to-b from-[#31c8ff00] via-[#31c8ff] to-[#31c8ff00] shadow-[0_0_10px_rgba(49,200,255,0.4)] sm:h-[50px]"
                   aria-hidden="true"
                 />
 
-                <div className="space-y-1 text-[length:var(--text-body)] leading-[1.4] text-text-secondary lg:text-[length:var(--text-body-lg)] lg:leading-[1.32]">
+                <div className="space-y-1 text-[length:var(--text-body)] leading-[1.4] text-text-secondary lg:text-[length:var(--text-body-md)] lg:leading-[1.32]">
                   <p className="max-w-[520px]">
                     Uma experiencia imersiva para que suas conquistas digitais e
                     seu conhecimento
@@ -144,31 +139,23 @@ export function SectionFive({ className }: SectionFiveProps) {
           <div className="flex w-full items-center justify-center rounded-[20px]">
             <div
               className="relative
-                          flex w-full max-w-[64rem] flex-col gap-4
+                          flex w-full max-w-[72rem] flex-col gap-4
                           overflow-hidden
                           rounded-[28px]
                           border border-[#f4c95d30]
-                          bg-[linear-gradient(145deg,rgba(10,18,39,0.92)_0%,rgba(9,15,32,0.86)_55%,rgba(23,38,74,0.68)_100%)]
                           px-5 py-4
-                          shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_0_0_1px_rgba(244,201,93,0.08),0_0_36px_rgba(244,201,93,0.18)]
                           backdrop-blur-[24px]
                           before:pointer-events-none
                           before:absolute
                           before:inset-0
                           before:rounded-[28px]
-                          before:bg-[linear-gradient(135deg,rgba(255,233,166,0.32)_0%,rgba(244,201,93,0.12)_30%,transparent_55%,rgba(244,201,93,0.18)_100%)]
-                          before:[mask:linear-gradient(#000_0_0)_content-box,linear-gradient(#000_0_0)]
-                          before:[mask-composite:exclude]
                           before:p-px
                           sm:flex-row sm:items-center sm:gap-5 sm:py-3
                           lg:justify-between"
             >
               {/* Glow decorativo */}
               <span
-                className="
-        pointer-events-none absolute inset-0
-        bg-[radial-gradient(circle_at_15%_50%,rgba(244,201,93,0.12),transparent_35%),radial-gradient(circle_at_85%_50%,rgba(91,192,235,0.08),transparent_35%)]
-      "
+                className="pointer-events-none absolute inset-0"
                 aria-hidden="true"
               />
 
@@ -180,7 +167,7 @@ export function SectionFive({ className }: SectionFiveProps) {
               </div>
 
               {/* Title text */}
-              <div className="relative w-full min-w-0 flex-1 space-y-1 text-center sm:text-left">
+              <div className="relative w-full min-w-0 flex-1 space-y-0 text-center sm:text-left">
                 <p className="font-heading text-[length:var(--text-body-lg)] font-medium text-text-primary lg:text-[length:var(--text-h4)]">
                   O conhecimento so tem valor real
                 </p>
