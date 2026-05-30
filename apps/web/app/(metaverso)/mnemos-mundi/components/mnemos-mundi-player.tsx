@@ -71,7 +71,31 @@ export function MnemosMundiPlayer({ className }: MnemosMundiPlayerProps) {
       <section className="h-[calc(100vh-240px)] w-[86.5vw] rounded-[28px] border border-cyan-200/70 bg-[#071b35]/35 shadow-[inset_0_0_80px_rgba(56,189,248,0.08),0_0_45px_rgba(56,189,248,0.12)] backdrop-blur-[2px]" />
 
       {/* BOTTOM MENU */}
-      <nav className="h-[74px] max-w-full w-[64vw] rounded-full border border-cyan-200/35 bg-[#071b35]/75 shadow-[0_0_40px_rgba(56,189,248,0.18)] backdrop-blur-xl" />
+      <nav className="relative flex h-[74px] max-w-full w-[64vw] items-center justify-between rounded-full border border-cyan-200/35 bg-[#071b35]/75 px-7 shadow-[0_0_40px_rgba(56,189,248,0.18)] backdrop-blur-xl">
+        <button className="flex h-12 min-w-[160px] items-center justify-center gap-3 rounded-full bg-white/[0.03] text-[13px] uppercase tracking-[0.12em] text-cyan-50/80 cursor-pointer hover:bg-[#0b2c56]/90 transition">
+          <span className="text-xl">✦</span>
+          Menu 1
+        </button>
+
+        <button className="flex h-12 min-w-[160px] items-center justify-center gap-3 rounded-full bg-white/[0.03] text-[13px] uppercase tracking-[0.12em] text-cyan-50/80 cursor-pointer hover:bg-[#0b2c56]/90 transition">
+          <span className="text-xl">▣</span>
+          Menu 2
+        </button>
+
+        <button className="absolute left-1/2 top-1/2 flex h-[92px] w-[92px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-200/60 bg-[#0b2c56] text-3xl text-cyan-50 shadow-[0_0_35px_rgba(56,189,248,0.65),inset_0_0_26px_rgba(56,189,248,0.18)] cursor-pointer hover:bg-[#0b2c56]/90 transition">
+          ▶
+        </button>
+
+        <button className="flex h-12 min-w-[160px] items-center justify-center gap-3 rounded-full bg-white/[0.03] text-[13px] uppercase tracking-[0.12em] text-cyan-50/80 cursor-pointer hover:bg-[#0b2c56]/90 transition">
+          <span className="text-xl">◎</span>
+          Menu 3
+        </button>
+
+        <button className="flex h-12 min-w-[160px] items-center justify-center gap-3 rounded-full bg-white/[0.03] text-[13px] uppercase tracking-[0.12em] text-cyan-50/80 cursor-pointer hover:bg-[#0b2c56]/90 transition">
+          <span className="text-xl">⬡</span>
+          Menu 4
+        </button>
+      </nav>
     </main>
   );
 }
