@@ -27,7 +27,7 @@ export function MnemosMundiPlayer({ className }: MnemosMundiPlayerProps) {
                 MNEMOS MUNDI
               </span>
               <span className="text-[10px] uppercase tracking-[0.32em] text-cyan-100/60">
-                NEXUS ACADEMY
+                EXPLORE. APRENDA. TRANSFORME
               </span>
             </div>
           </div>
