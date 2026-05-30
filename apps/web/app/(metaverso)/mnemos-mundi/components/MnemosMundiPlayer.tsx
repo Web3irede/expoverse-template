@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 type MnemosMundiPlayerProps = {
   className?: string;
 };
@@ -17,12 +20,17 @@ export function MnemosMundiPlayer({ className }: MnemosMundiPlayerProps) {
       <header className="h-[70px] max-w-full w-[96vw] rounded-[var(--radius-lg)] border border-[var(--border-soft)] bg-surface-glass shadow-[0_0_40px_var(--surface-blue-glass)] backdrop-blur-xl">
         <div className="flex h-full w-full items-center px-5">
           {/* HEADER LEFT */}
-          <div className="flex h-full min-w-[340px] items-center gap-4 pr-8">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[var(--border-soft)] bg-[var(--surface-blue-glass)]">
-              <img
+
+          <Link
+            href="/"
+            className="flex h-full min-w-[340px] items-center gap-4 pr-8"
+          >
+            <div className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[var(--border-soft)] bg-[var(--surface-blue-glass)]">
+              <Image
                 src="/images/logo_oficial.png"
                 alt="Mnemos Mundi Logo"
-                className="h-12 w-12 scale-115 object-contain"
+                fill
+                className="object-contain scale-115"
               />
             </div>
 
@@ -34,7 +42,7 @@ export function MnemosMundiPlayer({ className }: MnemosMundiPlayerProps) {
                 Explore. Aprenda. Transforme
               </span>
             </div>
-          </div>
+          </Link>
 
           <div className="h-9 w-px bg-[var(--border-soft)]" />
 

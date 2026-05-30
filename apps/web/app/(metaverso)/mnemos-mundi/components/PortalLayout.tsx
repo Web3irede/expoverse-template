@@ -2,7 +2,7 @@
 
 import React from "react";
 import { LoadingScreen } from "./LoadingScreen";
-import { MnemosMundiPlayer } from "./mnemos-mundi-player";
+import { MnemosMundiPlayer } from "./MnemosMundiPlayer";
 
 export function PortalLayout() {
   const [loaded, setLoaded] = React.useState(false);
