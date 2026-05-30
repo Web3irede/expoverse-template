@@ -82,7 +82,7 @@ export function MnemosMundiPlayer({ className }: MnemosMundiPlayerProps) {
           Menu 2
         </button>
 
-        <button className="absolute left-1/2 top-1/2 flex h-[92px] w-[92px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-200/60 bg-[#0b2c56] text-3xl text-cyan-50 shadow-[0_0_35px_rgba(56,189,248,0.65),inset_0_0_26px_rgba(56,189,248,0.18)] cursor-pointer hover:bg-[#0b2c56]/90 transition">
+        <button className="absolute left-1/2 top-1/2 flex h-[92px] w-[92px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-200/60 bg-[#0b2c56] text-3xl text-cyan-50 shadow-[0_0_15px_rgba(56,189,248,0.65),inset_0_0_16px_rgba(56,189,248,0.18)] cursor-pointer hover:bg-[#0b2c56]/90 transition hover:shadow-[0_0_26px_rgba(56,189,248,0.85),inset_0_0_20px_rgba(56,189,248,0.25)]">
           ▶
         </button>
 
