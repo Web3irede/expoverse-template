@@ -71,12 +71,12 @@ export default function Home() {
         <div className="page-shell relative z-10 flex min-h-[100svh] flex-col px-4 py-6 sm:px-6 sm:py-8 md:px-10 lg:px-16 lg:py-12">
           <header className="flex items-start">
             <div className="flex flex-wrap items-center gap-4 pt-2 sm:pt-4 lg:gap-6">
-              <div className="relative h-12 w-12 overflow-hidden rounded-full border border-cyan-200/50 shadow-[0_0_24px_rgba(91,192,235,0.25)] lg:h-14 lg:w-14">
+              <div className="relative h-12 w-12 overflow-hidden rounded-full border border-cyan-200/50 shadow-[0_0_24px_rgba(91,192,235,0.25)] lg:h-16 lg:w-16">
                 <Image
                   src="/images/logo_oficial.png"
                   alt="Logo Mnemos Mundi"
                   fill
-                  className="scale-[1.28] object-cover object-center"
+                  className="scale-[1.22] object-cover object-center"
                   priority
                 />
               </div>
