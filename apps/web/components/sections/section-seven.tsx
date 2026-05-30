@@ -46,7 +46,7 @@ export function SectionSeven({ className }: SectionSevenProps) {
     >
       <div className="page-shell section-shell mx-auto flex w-full flex-col">
         <div className="page-shell--wide mx-auto flex w-full max-w-[1760px] flex-col items-center gap-6 sm:gap-8 lg:gap-10">
-          <div className="flex w-full max-w-[390px] items-center justify-center sm:self-start">
+          <div className="flex w-full max-w-[390px] items-center justify-center">
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <span
                 className="h-[18px] w-[18px] rounded-full border border-[#33d1ff] shadow-[0_0_12px_rgba(51,209,255,0.4)]"

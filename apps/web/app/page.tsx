@@ -96,13 +96,10 @@ export default function Home() {
             <div className="grid w-full flex-1 items-center gap-10 lg:grid-cols-[minmax(0,48rem)_minmax(0,1fr)] lg:gap-16">
               <article className="flex min-h-0 flex-col justify-center py-4 lg:py-8">
                 <div className="max-w-[48rem]">
-                  <h1 className="font-heading text-[length:var(--text-mobile-hero)] leading-[0.92] font-light tracking-[-0.04em] text-text-primary sm:text-[length:var(--text-h1)] lg:text-[length:var(--text-display)]">
-                    <span className="block">E se aprender</span>
-                    <span className="block">fosse uma</span>
-                    <span className="block bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(91,192,235,0.18)]">
-                      aventura
-                    </span>
-                    <span className="block">que nunca termina?</span>
+                  <h1 className="max-w-[14ch] text-left font-alt-heading text-[length:var(--text-mobile-h1)] font-light leading-[0.94] tracking-[-0.04em] text-text-primary sm:max-w-[18ch] lg:max-w-[22ch] lg:text-[length:var(--text-h1)]">
+                    E se aprender fosse uma
+                    <span className=" bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(91,192,235,0.18)]"> aventura </span>
+                    que nunca termina?
                   </h1>
 
                   <p className="mt-6 max-w-[34rem] text-[length:var(--text-body)] leading-[1.5] text-text-secondary sm:mt-8 sm:text-[length:var(--text-body-lg)]">

@@ -97,7 +97,7 @@ export function SectionThree({ className }: SectionThreeProps) {
           <div className="flex flex-col gap-4 lg:gap-5">
             <div className="flex justify-center px-2 mb-2 lg:mb-3">
               <p className="text-center font-heading text-[length:var(--text-body-sm)] font-light tracking-[0.22em] text-text-secondary sm:text-[length:var(--text-body)] sm:tracking-[0.3em] lg:text-[length:var(--text-body-lg)] lg:tracking-[0.38em]">
-                VOCE NAO APENAS APRENDE. VOCE SE TRANSFORMA.
+                VOCE NÃO APENAS APRENDE. VOCÊ SE TRANSFORMA.
               </p>
             </div>
 
@@ -124,8 +124,8 @@ export function SectionThree({ className }: SectionThreeProps) {
                 <span className="h-[16px] w-[16px] rounded-full border border-[#5bc0eb]/70 shadow-[0_0_10px_rgba(91,192,235,0.4)] lg:h-[22px] lg:w-[22px]" />
               </div>
 
-              <p className="w-full text-center text-[length:var(--text-body-sm)] font-light leading-[1.4] text-text-secondary sm:text-left sm:text-[length:var(--text-body)] lg:text-[length:var(--text-h4)]">
-                Nao e so sobre estudar. E sobre{" "}
+              <p className="w-full text-center text-[length:var(--text-body-sm)] font-light leading-[1.4] text-text-secondary  sm:text-[length:var(--text-body)] lg:text-[length:var(--text-body-lg)]">
+                Não é só sobre estudar. É sobre{" "}
                 <span className="bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent">
                   deixar sua marca
                 </span>{" "}
