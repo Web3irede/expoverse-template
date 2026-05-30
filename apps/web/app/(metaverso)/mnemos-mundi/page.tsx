@@ -1,9 +1,5 @@
-import { MnemosMundiPlayer } from "./components/mnemos-mundi-player";
+import { PortalLayout } from "./components/PortalLayout";
 
 export default function Play() {
-  return (
-    <div className="w-full h-screen">
-        <MnemosMundiPlayer />
-    </div>
-  );
+  return <PortalLayout />;
 }
